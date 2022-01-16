@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2022/01/16/hello-world/"/>
-      <url>/2022/01/16/hello-world/</url>
+      <title>写在 BuyiXiao&#39;s Blog 开始</title>
+      <link href="/why-buyixiao-blog-start/"/>
+      <url>/why-buyixiao-blog-start/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="who-is-buyixiao"><a href="#who-is-buyixiao" class="headerlink" title="who is buyixiao"></a>who is buyixiao</h2><p>buyixiao 行不改名，坐不改姓；江湖人称 <font color="red">肖不已</font>，或者 <font color="red">布衣肖</font>；三尺微命，一介书生，不足挂齿。<br>buyixiao 在这个互联网中还有其他两个亲兄弟，一个叫 <a href="https://inspurer.github.io/">inspurer</a>，还有一个叫 <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUzMDE5MzQ3Ng==#wechat_redirect">月小水长</a>。</p><h2 id="buyixiao’s-skills"><a href="#buyixiao’s-skills" class="headerlink" title="buyixiao’s skills"></a>buyixiao’s skills</h2><p>写过数据分析可视化，会一点爬虫，前 Android 不知名工程师，上线过小程序和 Chrome 扩展，还是一个 Python 全沾工程师…</p><p>之前在某大厂干过开发；现在在家里睡大觉。</p><h2 id="buyixiao’s-blog"><a href="#buyixiao’s-blog" class="headerlink" title="buyixiao’s blog"></a>buyixiao’s blog</h2><p>关于为什么要开这个 blog。有两个原因。</p><p>第一层次的原因是，buyixiao 之前在公众号更新文章，但是该生态比较封闭，而且无法很好修改发布过的文章，所以急切需要一个自主可控的博客系统。</p><p>另一个是因为，buyixiao 老大哥  <a href="https://inspurer.github.io/">inspurer 的个人博客</a> 源代码已经不可考了，而且网站历史包袱太重，包括样式，渲染速度等都积重难返了，所以有 buyixiao’s blog 弟承兄业。</p><p>所以这篇文章，还是有一点序的意思。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> buyixiao,inspurer </tag>
+            
+        </tags>
       
     </entry>
     
