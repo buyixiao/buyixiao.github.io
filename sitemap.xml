@@ -47,7 +47,14 @@
 
   
   <url>
-    <loc>https://buyixiao.github.io/tags/buyixiao-inspurer/</loc>
+    <loc>https://buyixiao.github.io/tags/buyixiao/</loc>
+    <lastmod>2022-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/inspurer/</loc>
     <lastmod>2022-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
