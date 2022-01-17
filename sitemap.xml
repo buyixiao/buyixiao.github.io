@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://buyixiao.github.io/blog/butterfly-beauty-quick-start.html</loc>
+    
+    <lastmod>2022-01-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://buyixiao.github.io/link/index.html</loc>
+    
+    <lastmod>2022-01-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/blog/pip-install-success-import-fail.html</loc>
     
     <lastmod>2022-01-17</lastmod>
     
@@ -21,24 +39,6 @@
   
   <url>
     <loc>https://buyixiao.github.io/comment/index.html</loc>
-    
-    <lastmod>2022-01-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/blog/butterfly-beauty-quick-start.html</loc>
-    
-    <lastmod>2022-01-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/blog/pip-install-success-import-fail.html</loc>
     
     <lastmod>2022-01-17</lastmod>
     
@@ -83,27 +83,6 @@
 
   
   <url>
-    <loc>https://buyixiao.github.io/tags/butterfly/</loc>
-    <lastmod>2022-01-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/hexo/</loc>
-    <lastmod>2022-01-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/beauty/</loc>
-    <lastmod>2022-01-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://buyixiao.github.io/tags/buyixiao/</loc>
     <lastmod>2022-01-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -140,6 +119,27 @@
   
   <url>
     <loc>https://buyixiao.github.io/tags/requests/</loc>
+    <lastmod>2022-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/butterfly/</loc>
+    <lastmod>2022-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/hexo/</loc>
+    <lastmod>2022-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/beauty/</loc>
     <lastmod>2022-01-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

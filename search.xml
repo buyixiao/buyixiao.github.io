@@ -8,7 +8,7 @@
       <link href="/blog/butterfly-beauty-quick-start.html"/>
       <url>/blog/butterfly-beauty-quick-start.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>博主 2018/06/07 配置了一个基于 hexo + next 的博客：<a href="https://inspurer.github.io/">月小水长的个人博客</a>，维护几年有余后，源码或配置暂时丢失，于 2022/01/16 新开了 <a href="https://buyixiao.github.io/">BuyiXiao’s Blog</a> ，算是新的博客旅程，兴许日后会在 <a href="https://inspurer.github.io/">月小水长的个人博客</a> 继续更新~</p><p>本站点基于 hexo 6.0 + butterfly 4.0.1，本文记述了了新博客配置过程的点点滴滴<del>，就如文章摘要所述，<strong>不是臃肿的流水教程，但是小而精的查漏补缺，以及记录常见易错点</strong>。有问题欢迎留言</del></p>]]></content>
       
       
       
