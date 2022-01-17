@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2022-01-17T06:57:18.791Z</updated>
+  <updated>2022-01-17T11:44:37.470Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -17,11 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【2022最新】基于 hexo 的 butterfly 优化教程</title>
+    <link href="https://buyixiao.github.io/blog/butterfly-beautify-quick-start.html%20%20%20%20blog%20%E4%B9%9F%E5%8F%AF%E6%94%B9%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%8E%89"/>
+    <id>https://buyixiao.github.io/blog/butterfly-beautify-quick-start.html%20%20%20%20blog%20%E4%B9%9F%E5%8F%AF%E6%94%B9%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%8E%89</id>
+    <published>2022-01-17T10:45:33.000Z</published>
+    <updated>2022-01-17T11:44:37.470Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>pip install 成功了，import 却出错了</title>
-    <link href="https://buyixiao.github.io/pip-install-success-import-fail/"/>
-    <id>https://buyixiao.github.io/pip-install-success-import-fail/</id>
+    <link href="https://buyixiao.github.io/blog/pip-install-success-import-fail.html%20%20%20%20blog%20%E4%B9%9F%E5%8F%AF%E6%94%B9%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%8E%89"/>
+    <id>https://buyixiao.github.io/blog/pip-install-success-import-fail.html%20%20%20%20blog%20%E4%B9%9F%E5%8F%AF%E6%94%B9%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%8E%89</id>
     <published>2022-01-17T06:03:55.000Z</published>
-    <updated>2022-01-17T06:57:18.791Z</updated>
+    <updated>2022-01-17T11:44:37.468Z</updated>
     
     <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>可能不少人遇到这样的问题，为什么在 cmd 命令行中 <code>pip install requests</code> 成功了，在 Pycharm 中写代码 <code>import requests</code> 还是报 module not found 错误，装是装上了，又没完全装上，何哉？下面以 requests 这个库为例子，详细说明原因及解决办法。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>根本原因是，<strong>没有认识处理好 python 多版本共存问题，cmd 里装 requests 的 python 环境不是你 pycharm 里面运行的那个 python 环境</strong>。</p><p>在 cmd 输入 <code>pip install requests</code> 前，不妨先输入一个命令，查看有哪些 Python 环境：<code>where python</code></p><p>cmd 显示如下，可以看到，电脑有三个 python 环境，当在命令行输入 python 时，默认进入了第一个 Python36_64 环境，这样的顺序是由编辑系统环境变量的先后顺序决定的</p><blockquote><p>D:\a\b\c\Python36_64\python.exe<br>D:\c\b\a\Python388\python.exe<br>C:\x\y\z\python.exe</p></blockquote><p>然后查看有哪些 pip ：<code>where pip</code></p><blockquote><p>D:\a\b\c\Python36_64\Scripts\pip.exe<br>D:\c\b\a\Python388\Scripts\pip.exe</p></blockquote><p>在 cmd 输入 <code>pip install requests</code> 时，只会给环境变量中从上到下第一个 pip 对应的 Python 环境装的，也就是给 Python36_64 这个环境装的。</p><p>然后看下 Pycharm 中是不是也用的这个 Python 环境，点击菜单栏的 File – Settings</p><p><img src="https://s2.loli.net/2022/01/17/XOf9cv1mFn2wxGa.png" alt="Pycharm 查看 Python 环境.png"></p><p>展开 Python Interpreter，可以看到就是 cmd 里默认的 Python36_64 环境，点击上图中右上角的锯齿状设置按钮，可以给 Pycharm 切换 python 环境。然后这些增删操作看符号就知道了，不赘述。</p><p>如果选中了想要的 python 环境，可以点击上图左下角中的 + 号按钮，搜索 requests 包，点击并安装。</p><p><img src="https://s2.loli.net/2022/01/17/4f9vmuiNy1jL7hC.png" alt="Pycharm 安装库.png"></p><h2 id="cmd-和-Pycharm-换源"><a href="#cmd-和-Pycharm-换源" class="headerlink" title="cmd 和 Pycharm 换源"></a>cmd 和 Pycharm 换源</h2><p>由于某些原因 python 库默认的下载地址下载很慢，在 cmd 中可以依次输入以面命令切换成 douban 源，下载安装就起飞了</p><blockquote><p>pip install pqi<br>pqi use douban</p></blockquote><p>在 Pycharm 中也有等同操作，点击上一个图中的 Manage Repositories ，将 <a href="https://pypi.python.com/simple/">https://pypi.python.com/simple/</a> 修改成   <a href="https://pypi.douban.com/simple/">https://pypi.douban.com/simple/</a> ，并且一路 OK 确定即可。</p><p>最后再回到 cmd 中</p><blockquote><p>D:\a\b\c\Python36_64\Scripts\pip.exe<br>D:\c\b\a\Python388\Scripts\pip.exe</p></blockquote><p>如果想要快速给第二个 Python388 装 requests，该怎么办呢？我们在文件夹中打开 D:\c\b\a\Python388\Scripts 这个路径。</p><p><img src="https://s2.loli.net/2022/01/17/4GBIcQFVr7dijKU.png" alt="pip 目录"></p><p>我们可以直接在 cmd 中通过 <code>pip3.8 install requests</code> 给这个环境装 requests；</p><p>也可以复制一个 pip.exe，并粘贴命名为 pipenv.exe，<code>pipenv install requests</code>；</p><p>除了 pip3.8 是这个环境独有的，其他两个 pip.exe 和 pip3.exe 在 python36_64 那个环境也有，所以 pip/pip3 命令会被在环境变量中优先级高的 python36_64 的 pip 接管。</p><h2 id="如何避免这种问题"><a href="#如何避免这种问题" class="headerlink" title="如何避免这种问题"></a>如何避免这种问题</h2><p>在系统中只装一个版本的 Python，本着一个项目一个虚拟环境的原则，每次新建项目，用系统的 Python 复制出一个虚拟环境，起个和项目相关的环境名，然后在 Pycharm 选择虚拟环境目录下，Scripts 文件夹下的 python.exe 作为项目的解析器。</p><p>Windows 下创建虚拟环境步骤如下：</p><h4 id="安装-virtualenv"><a href="#安装-virtualenv" class="headerlink" title="安装 virtualenv"></a>安装 virtualenv</h4><blockquote><p>pip install virtualenv</p></blockquote><h4 id="在当前目录下创建虚拟环境"><a href="#在当前目录下创建虚拟环境" class="headerlink" title="在当前目录下创建虚拟环境"></a>在当前目录下创建虚拟环境</h4><blockquote><p>virtualenv env_crawl</p></blockquote><h4 id="激活、退出虚拟环境"><a href="#激活、退出虚拟环境" class="headerlink" title="激活、退出虚拟环境"></a>激活、退出虚拟环境</h4><p>在 cmd 中需要 cd 进入到虚拟环境目录下 Script 文件</p><p>夹中，使用下述命令激活</p><blockquote><p>activate</p></blockquote><p>当然，如果不在 Script 下，但在当前盘符中，使用</p><blockquote><p>./xxx/yyy activate</p></blockquote><p>这种相对路径格式也是可以的。</p><p>激活之后，cmd 会在 path 最前面显示一个 <strong>（{env_crawl})</strong> ，在当前 cmd 会话中 Python 相关的操作都是针对这个虚拟环境而言的，操作和修改不会影响其他 Python 环境。如果想要退出环境，只需要使用</p><blockquote><p>deactivate</p></blockquote><p>值得欣喜的是，<strong>如果在 Pycharm 选择中虚拟环境，那么在 Pycharm 中打开终端，就可以直接进入到了当前的并且是已经激活的虚拟环境</strong>。</p>]]></content>
     
@@ -45,10 +58,10 @@
   
   <entry>
     <title>写在 BuyiXiao&#39;s Blog 开始</title>
-    <link href="https://buyixiao.github.io/why-buyixiao-blog-start/"/>
-    <id>https://buyixiao.github.io/why-buyixiao-blog-start/</id>
+    <link href="https://buyixiao.github.io/blog/why-buyixiao-blog-start.html%20%20%20%20blog%20%E4%B9%9F%E5%8F%AF%E6%94%B9%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%8E%89"/>
+    <id>https://buyixiao.github.io/blog/why-buyixiao-blog-start.html%20%20%20%20blog%20%E4%B9%9F%E5%8F%AF%E6%94%B9%E4%B9%9F%E5%8F%AF%E4%BB%A5%E5%8E%BB%E6%8E%89</id>
     <published>2022-01-16T12:56:22.000Z</published>
-    <updated>2022-01-17T03:54:32.759Z</updated>
+    <updated>2022-01-17T11:44:37.469Z</updated>
     
     <content type="html"><![CDATA[<h2 id="who-is-buyixiao"><a href="#who-is-buyixiao" class="headerlink" title="who is buyixiao"></a>who is buyixiao</h2><p>buyixiao 行不改名，坐不改姓；江湖人称 <font color="red">肖不已</font>，或者 <font color="red">布衣肖</font>；三尺微命，一介书生，不足挂齿。<br>buyixiao 在这个互联网中还有其他两个亲兄弟，一个叫 <a href="https://inspurer.github.io/">inspurer</a>，还有一个叫 <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUzMDE5MzQ3Ng==#wechat_redirect">月小水长</a>。</p><h2 id="buyixiao’s-skills"><a href="#buyixiao’s-skills" class="headerlink" title="buyixiao’s skills"></a>buyixiao’s skills</h2><p>写过数据分析可视化，会一点爬虫，前 Android 不知名工程师，上线过小程序和 Chrome 扩展，还是一个 Python 全沾工程师…</p><p>之前在某大厂干过开发，现在在家里睡大觉。</p><h2 id="buyixiao’s-blog"><a href="#buyixiao’s-blog" class="headerlink" title="buyixiao’s blog"></a>buyixiao’s blog</h2><p>关于为什么要开这个 blog，有两个原因。</p><p>第一层次的原因是，buyixiao 之前在公众号更新文章，但是该生态比较封闭，而且无法很好修改发布过的文章，还有其他各种限制，所以急切需要一个自主可控的博客系统。</p><p>另一个是因为，buyixiao 老大哥  <a href="https://inspurer.github.io/">inspurer 的个人博客</a> 源代码已经不可考了，而且网站历史包袱太重，包括样式，渲染速度等都积重难返了，所以有 <a href="https://buyixiao.github.io/">buyixiao’s blog</a> 弟承兄业。</p><p>所以这篇文章，还是有一点序的意思。</p>]]></content>
     
