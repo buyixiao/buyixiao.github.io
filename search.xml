@@ -4,6 +4,116 @@
   
     
     <entry>
+      <title>新微博通知 chrome 扩展使用介绍</title>
+      <link href="/blog/new-weibo-notify-chrome-extension.html"/>
+      <url>/blog/new-weibo-notify-chrome-extension.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>博主开发的新微博通知助手，已上架谷歌扩展商城：<a href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E5%8D%9A%E9%80%9A%E7%9F%A5%E5%8A%A9%E6%89%8B/cpmlmjdimlnhgnakcjfmbmfglhkaoago?hl=zh-CN">点击前往商城免费安装</a>。</p><p>它的作用是接收指定微博用户的最新微博通知（不包括置顶微博）。</p><p>它的特色是不需要 Cookie，不需要登录无状态即可收到桌面通知。</p><p>它的操作也特别简单，自动解析 uid，点击保存即可。</p><p><img src="https://s2.loli.net/2022/01/20/ygVbRSAwGJXvO7Y.png" alt="chrome_extension_zip.png"></p><p>然后插件就会定时 20s 去轮询这个人的微博状态，一有它的最新微博就会有系统级的桌面通知。</p><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>1、注意解析的地址栏，必须是微博数字 uid，微博用户自定义域名的 id 不行。比如谢娜的微博主页自定义成 xiena，但是每一个微博用户都有数字 uid 的，怎么找呢，秘诀就是在这个微博用户任意一条的微博的用户名上右键在新 tab 打开链接，然后地址栏就有数字 uid 了。</p><p>这样自动解析成功，点击保存就能接受新微博通知了。</p><p>无论自动解析成否，也可以手动输入数字 uid；可以在上图 2 处输入框输入，也可以在上图 3 处 add uid 输入。保存的 uid 实时显示在 3 处浅绿色标签，一个 uid 对应一个标签。可以点击标签上的 X 删除 uid。</p><p>2、明明保存了配置，显示添加成功，也有新微博了，就是收不到通知？</p><p>可能在电脑的设置里关闭了 Chrome 的桌面通知权限？打开即可。</p><p>浏览器在后台或前台运行的话，能实时通知，如果关闭了，下次打开也能收到最新通知。</p><p>如果没网络那就肯定收不到通知了。</p><p>3、轮询时间不可设置</p><p>轮询时间也不能设置，固定 20s。何哉？因为本插件的定位是非常克制的，没有 cookie，登录，无状态。如果想同时接收很多人的通知，建议直接在浏览器打开 weibo.com。本插件的最佳食用方式是少量的 uid，uid 对应的博主不频繁发微博这种。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Chrome Extension </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微博 </tag>
+            
+            <tag> chrome 扩展 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>浅谈微博评论水军和异常流量</title>
+      <link href="/blog/weibo-comment-robot-analysis.html"/>
+      <url>/blog/weibo-comment-robot-analysis.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>近年来，微博评论区的异常评论流量现象甚嚣尘上，背后是大量的营销账号的扰乱视听以及作为他们的傀儡的水军账号的推波助澜，本篇利用微博评论爬虫采集的公开数据，简单分析了这些现象的一些表征和原因。</p><h3 id="数说"><a href="#数说" class="headerlink" title="数说"></a>数说</h3><p>以人民日报发表的关于 <strong>#吴亦凡被批捕#</strong> 这条微博及其评论数据为例子。</p><p><img src="https://s2.loli.net/2022/01/20/AXRmgYvsIUJOHdb.png" alt="人民日报.png"></p><p>网页显示有近 18w 条微博，实际抓取去重后有 10w 稍有余的数据，包括根评论和回复，后文分析评论时，仅针对分析发博一天内的评论。抓取保存的评论字段信息如下</p><table><thead><tr><th align="center">字段名</th><th align="center">含义</th></tr></thead><tbody><tr><td align="center">parent_cid</td><td align="center">该回复所属的根评论 id，只有回复评论有值，根评论为空</td></tr><tr><td align="center">cid</td><td align="center">评论 id</td></tr><tr><td align="center">time</td><td align="center">评论发表时间</td></tr><tr><td align="center">text</td><td align="center">评论内容</td></tr><tr><td align="center">like_count</td><td align="center">评论点赞数</td></tr><tr><td align="center">reply_count</td><td align="center">该根评论有多少条回复评论，只有根评论有值，回复评论为0</td></tr><tr><td align="center">uid</td><td align="center">评论者 id</td></tr><tr><td align="center">username</td><td align="center">评论者用户名</td></tr><tr><td align="center">following</td><td align="center">评论者关注数</td></tr><tr><td align="center">followed</td><td align="center">评论者粉丝数</td></tr><tr><td align="center">gender</td><td align="center">评论者性别</td></tr></tbody></table><p>第一步，可视化该条微博发布后一天内每分钟新发评论数量时间线。</p><p><img src="https://s2.loli.net/2022/01/20/dIz632LbKUP7e1C.png" alt="发博后每分钟评论数.png"></p><p>每分钟评论数在短时间内指数型急剧上升，最后又以一象限双曲线形式下降，符合常理认知。同时可以看出，在发博时间 2021/08/16 20:30 过去 840mins，也就是发博 16 小时后，2021/08/17 10:30 时有个极大值，why？迫于本篇推送选题的压力，我马上想到了可能是水军账号这个时候营业了，但是我分析了这个时间段发布评论的用户，肉眼可见几乎没有水军账号。于是乎，我翻开了微博的历史热搜数据，发现在这个时间点，#都美竹感谢朝阳公安和粉丝# 这个话题冲到了热搜第一，很显然，是由于该关联话题的热度扩散到了这条微博。</p><p><img src="https://s2.loli.net/2022/01/20/SYlnov7ZT8JjrMO.png" alt="历史热搜.png"></p><p>如果查证历史热搜数据该时间点无相关热搜，且几乎没有观察到该时间点附近评论营销水军内容，那么下降曲线就会是完美的一象限双曲线；否则就需要确定是相关热搜或者是营销水军，亦或者是它们共同作用的结果。</p><p>第二步，怎么大致判断评论中水军账号呢，我的做法是 group_by uid。</p><p>分析结果显示，一天之内，一个账号最多针对该微博发布了 26 条评论，发布 10 条评论以上的账号多达 30 余人，这些账号具有一定的营销号或水军嫌疑，目前只能手动点开微博主页浏览去确定，长期地，我想输出一个模型，根据 uid 判断账号是否是营销号或者水军账号，目前的想法就是根据它的发博连续性，关注粉丝之比，账号新旧程序等维度考量，大家有好想法欢迎留言。</p><p>最后可视化每分钟评论的平均文本长度如下。</p><p><img src="https://s2.loli.net/2022/01/20/gvCaqyJENzZriuj.png" alt="发博后每分钟评论平均长度.png"></p><p>处理时去除了 html 标签表情等非文本内容，但是上图依旧有很大的锯齿，应该用中值滤波处理之，不过走势应该不会变。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>1、微博历史热搜数据：<a href="https://www.weibotop.cn/2.0/">https://www.weibotop.cn/2.0/</a></p><p>2、研究报告 | 微博评论中的水军异常流量分析：<a href="https://zhuanlan.zhihu.com/p/436967668">https://zhuanlan.zhihu.com/p/436967668</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微博评论 </tag>
+            
+            <tag> 水军 </tag>
+            
+            <tag> 营销号 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微博明星关系网络可视化</title>
+      <link href="/blog/weibo-superstar-relation-network-visual.html"/>
+      <url>/blog/weibo-superstar-relation-network-visual.html</url>
+      
+        <content type="html"><![CDATA[<p>抓取微博指定用户的关注信息，并做了一定的可视化工作。下面以抓取明星关注为例，阐述从抓取数据，到关系网络的构造，最后使用 gephi 可视化的全流程。</p><p>第一步，以一个<strong>给定的明星 uid 为起点，爬取它的关注，接着爬关注的关注</strong>…从形式上看是一个<strong>递归的网络</strong>，所以设计了一个<strong>递归的爬虫</strong>，可以指定抓取指定的层数，断网或其他出错可以从上次爬到的地方继续；一般来说 3 层就非常多，以一个明星关注 100 个明星为例，第一层只有起点明星，第二层有 100 个明星，第三层就有 10000 个明星了，我使用<strong>杨幂</strong>的 uid 为起点，抓取 3 层网络，实测抓到了 2w+ 明星，20w+ 对明星关注关系，最后随机抽了 5000 条关注关系，2000 余明星。</p><p>第二步，根据上一步得到的数据构造<strong>关系矩阵</strong>，方便 gephi 可视化输入。这个关系矩阵需要两个 csv 文件表示，一个节点 <strong>nodes.csv</strong> 文件，另一个边表 <strong>edges.csv</strong> 文件。</p><p>nodes.csv 四个字段，id 即该明星的微博 userId，label 是其名字，weight 是在关系网络中被关注的次数，class 是 <strong>louvain</strong> 聚类的结果。</p><p>edges.csv 三个字段：source,target,weight，分别对应边的起点、终点、权重。</p><p>gephi 最终的效果图示：</p><p><img src="https://s2.loli.net/2022/01/20/CD1jH6aoOyE5bFN.png" alt="全景图.png"></p><p><img src="https://s2.loli.net/2022/01/20/jKC7VkRoaApzu84.png" alt="网络边缘放大图.png"></p><p><img src="https://s2.loli.net/2022/01/20/Gk7P5DENsSVH9Q4.png" alt="网络中心放大图.png"></p><p>谁是十八线，谁是一线，一目了然，各位明星，如有冒犯，纯属无心之举。</p><p>动态效果可以参考视频：</p><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="//player.bilibili.com/player.html?aid=593321690&bvid=BV1dq4y1k7g8&cid=488583955&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div><p>本文首发： <a href="https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html">BuyiXiao’s Blog</a></p><p>链接地址：<a href="https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html">https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html</a></p><p>转载需注明来源。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 可视化 </tag>
+            
+            <tag> 关系网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>微博转发网络可视化构建</title>
+      <link href="/blog/weibo-forward-network-visual.html"/>
+      <url>/blog/weibo-forward-network-visual.html</url>
+      
+        <content type="html"><![CDATA[<p>以敲钟人李文亮英雄的最后一条微博为例子，使用 <a href="https://buyixiao.github.io/blog/weibo-super-spider.html#%E8%BD%AC%E5%8F%91%E7%88%AC%E8%99%AB">新版微博转发爬虫</a> 抓取微博的具体转发信息,，抓取到 10w+ 的转发信息。</p><p>然后使用 <strong>pyecharts</strong> 构建了该条微博的 N 层转发关系网络。</p><p>依次取 N = 1,2,3,4，构建的网络图示：</p><div class="fj-gallery"><p><img src="https://s2.loli.net/2022/01/20/6W7qFOMVakQt12G.png" alt="n1.png"><br><img src="https://s2.loli.net/2022/01/20/UbLRrJdM3uZs1KY.png" alt="n4.png"><br><img src="https://s2.loli.net/2022/01/20/bYAP5xIMSrgmkis.png" alt="n2.png"><br><img src="https://s2.loli.net/2022/01/20/x8Oaz59lwZSdJrf.png" alt="n3.png"></p>          </div><p>动态效果可以参考视频：</p><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="//player.bilibili.com/player.html?aid=550803158&bvid=BV1Yq4y1c7TU&cid=488591630&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div><p>本文首发： <a href="https://buyixiao.github.io/blog/weibo-forward-network-visual.html">BuyiXiao’s Blog</a></p><p>链接地址：<a href="https://buyixiao.github.io/blog/weibo-forward-network-visual.html">https://buyixiao.github.io/blog/weibo-forward-network-visual.html</a></p><p>转载需注明来源。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微博关系网络 </tag>
+            
+            <tag> 可视化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python 中的 pyd 和 pyc 文件</title>
       <link href="/blog/pyd-pyc-summary.html"/>
       <url>/blog/pyd-pyc-summary.html</url>
@@ -47,6 +157,8 @@
       
         <tags>
             
+            <tag> 微博评论 </tag>
+            
             <tag> weibosuperspider </tag>
             
             <tag> 爬虫 </tag>
@@ -54,8 +166,6 @@
             <tag> python </tag>
             
             <tag> 用户微博 </tag>
-            
-            <tag> 微博评论 </tag>
             
             <tag> 微博转发 </tag>
             

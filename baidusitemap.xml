@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://buyixiao.github.io/blog/new-weibo-notify-chrome-extension.html</loc>
+    <lastmod>2022-01-20</lastmod>
+  </url>
+  <url>
+    <loc>https://buyixiao.github.io/blog/weibo-comment-robot-analysis.html</loc>
+    <lastmod>2022-01-20</lastmod>
+  </url>
+  <url>
+    <loc>https://buyixiao.github.io/blog/weibo-forward-network-visual.html</loc>
+    <lastmod>2022-01-20</lastmod>
+  </url>
+  <url>
+    <loc>https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html</loc>
+    <lastmod>2022-01-20</lastmod>
+  </url>
+  <url>
+    <loc>https://buyixiao.github.io/blog/butterfly-beauty-quick-start.html</loc>
+    <lastmod>2022-01-20</lastmod>
+  </url>
+  <url>
     <loc>https://buyixiao.github.io/blog/weibo-super-spider.html</loc>
     <lastmod>2022-01-20</lastmod>
   </url>
   <url>
     <loc>https://buyixiao.github.io/blog/pyd-pyc-summary.html</loc>
     <lastmod>2022-01-20</lastmod>
-  </url>
-  <url>
-    <loc>https://buyixiao.github.io/blog/butterfly-beauty-quick-start.html</loc>
-    <lastmod>2022-01-19</lastmod>
   </url>
   <url>
     <loc>https://buyixiao.github.io/blog/pip-install-success-import-fail.html</loc>
