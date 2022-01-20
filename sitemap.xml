@@ -115,6 +115,34 @@
   </url>
   
   <url>
+    <loc>https://buyixiao.github.io/tags/pip/</loc>
+    <lastmod>2022-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/pycharm/</loc>
+    <lastmod>2022-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/%E6%8D%A2%E6%BA%90/</loc>
+    <lastmod>2022-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/requests/</loc>
+    <lastmod>2022-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://buyixiao.github.io/tags/butterfly/</loc>
     <lastmod>2022-01-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -144,34 +172,6 @@
   
   <url>
     <loc>https://buyixiao.github.io/tags/inspurer/</loc>
-    <lastmod>2022-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/pip/</loc>
-    <lastmod>2022-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/pycharm/</loc>
-    <lastmod>2022-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/%E6%8D%A2%E6%BA%90/</loc>
-    <lastmod>2022-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/requests/</loc>
     <lastmod>2022-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
