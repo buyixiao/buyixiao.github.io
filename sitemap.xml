@@ -101,6 +101,20 @@
 
   
   <url>
+    <loc>https://buyixiao.github.io/tags/pyd/</loc>
+    <lastmod>2022-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://buyixiao.github.io/tags/pyc/</loc>
+    <lastmod>2022-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://buyixiao.github.io/tags/pip/</loc>
     <lastmod>2022-01-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -123,20 +137,6 @@
   
   <url>
     <loc>https://buyixiao.github.io/tags/requests/</loc>
-    <lastmod>2022-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/pyd/</loc>
-    <lastmod>2022-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://buyixiao.github.io/tags/pyc/</loc>
     <lastmod>2022-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
