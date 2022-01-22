@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://buyixiao.github.io/blog/weibo-comment-robot-analysis.html</loc>
+    <lastmod>2022-01-22</lastmod>
+  </url>
+  <url>
     <loc>https://buyixiao.github.io/blog/what-i-have-lived-for-by-russell.html</loc>
     <lastmod>2022-01-22</lastmod>
   </url>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>https://buyixiao.github.io/blog/new-weibo-notify-chrome-extension.html</loc>
-    <lastmod>2022-01-20</lastmod>
-  </url>
-  <url>
-    <loc>https://buyixiao.github.io/blog/weibo-comment-robot-analysis.html</loc>
     <lastmod>2022-01-20</lastmod>
   </url>
   <url>

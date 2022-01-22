@@ -86,7 +86,7 @@
     <link href="https://buyixiao.github.io/blog/weibo-comment-robot-analysis.html"/>
     <id>https://buyixiao.github.io/blog/weibo-comment-robot-analysis.html</id>
     <published>2022-01-20T11:37:07.000Z</published>
-    <updated>2022-01-20T11:52:54.861Z</updated>
+    <updated>2022-01-22T10:47:13.423Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>近年来，微博评论区的异常评论流量现象甚嚣尘上，背后是大量的营销账号的扰乱视听以及作为他们的傀儡的水军账号的推波助澜，本篇利用微博评论爬虫采集的公开数据，简单分析了这些现象的一些表征和原因。</p><h3 id="数说"><a href="#数说" class="headerlink" title="数说"></a>数说</h3><p>以人民日报发表的关于 <strong>#吴亦凡被批捕#</strong> 这条微博及其评论数据为例子。</p><p><img src="https://s2.loli.net/2022/01/20/AXRmgYvsIUJOHdb.png" alt="人民日报.png"></p><p>网页显示有近 18w 条微博，实际抓取去重后有 10w 稍有余的数据，包括根评论和回复，后文分析评论时，仅针对分析发博一天内的评论。抓取保存的评论字段信息如下</p><table><thead><tr><th align="center">字段名</th><th align="center">含义</th></tr></thead><tbody><tr><td align="center">parent_cid</td><td align="center">该回复所属的根评论 id，只有回复评论有值，根评论为空</td></tr><tr><td align="center">cid</td><td align="center">评论 id</td></tr><tr><td align="center">time</td><td align="center">评论发表时间</td></tr><tr><td align="center">text</td><td align="center">评论内容</td></tr><tr><td align="center">like_count</td><td align="center">评论点赞数</td></tr><tr><td align="center">reply_count</td><td align="center">该根评论有多少条回复评论，只有根评论有值，回复评论为0</td></tr><tr><td align="center">uid</td><td align="center">评论者 id</td></tr><tr><td align="center">username</td><td align="center">评论者用户名</td></tr><tr><td align="center">following</td><td align="center">评论者关注数</td></tr><tr><td align="center">followed</td><td align="center">评论者粉丝数</td></tr><tr><td align="center">gender</td><td align="center">评论者性别</td></tr></tbody></table><p>第一步，可视化该条微博发布后一天内每分钟新发评论数量时间线。</p><p><img src="https://s2.loli.net/2022/01/20/dIz632LbKUP7e1C.png" alt="发博后每分钟评论数.png"></p><p>每分钟评论数在短时间内指数型急剧上升，最后又以一象限双曲线形式下降，符合常理认知。同时可以看出，在发博时间 2021/08/16 20:30 过去 840mins，也就是发博 16 小时后，2021/08/17 10:30 时有个极大值，why？迫于本篇推送选题的压力，我马上想到了可能是水军账号这个时候营业了，但是我分析了这个时间段发布评论的用户，肉眼可见几乎没有水军账号。于是乎，我翻开了微博的历史热搜数据，发现在这个时间点，#都美竹感谢朝阳公安和粉丝# 这个话题冲到了热搜第一，很显然，是由于该关联话题的热度扩散到了这条微博。</p><p><img src="https://s2.loli.net/2022/01/20/SYlnov7ZT8JjrMO.png" alt="历史热搜.png"></p><p>如果查证历史热搜数据该时间点无相关热搜，且几乎没有观察到该时间点附近评论营销水军内容，那么下降曲线就会是完美的一象限双曲线；否则就需要确定是相关热搜或者是营销水军，亦或者是它们共同作用的结果。</p><p>第二步，怎么大致判断评论中水军账号呢，我的做法是 group_by uid。</p><p>分析结果显示，一天之内，一个账号最多针对该微博发布了 26 条评论，发布 10 条评论以上的账号多达 30 余人，这些账号具有一定的营销号或水军嫌疑，目前只能手动点开微博主页浏览去确定，长期地，我想输出一个模型，根据 uid 判断账号是否是营销号或者水军账号，目前的想法就是根据它的发博连续性，关注粉丝之比，账号新旧程序等维度考量，大家有好想法欢迎留言。</p><p>最后可视化每分钟评论的平均文本长度如下。</p><p><img src="https://s2.loli.net/2022/01/20/gvCaqyJENzZriuj.png" alt="发博后每分钟评论平均长度.png"></p><p>处理时去除了 html 标签表情等非文本内容，但是上图依旧有很大的锯齿，应该用中值滤波处理之，不过走势应该不会变。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>1、微博历史热搜数据：<a href="https://www.weibotop.cn/2.0/">https://www.weibotop.cn/2.0/</a></p><p>2、研究报告 | 微博评论中的水军异常流量分析：<a href="https://zhuanlan.zhihu.com/p/436967668">https://zhuanlan.zhihu.com/p/436967668</a></p>]]></content>
     
@@ -97,6 +97,8 @@
     
     <category term="可视化" scheme="https://buyixiao.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
+    
+    <category term="可视化" scheme="https://buyixiao.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
     <category term="微博评论" scheme="https://buyixiao.github.io/tags/%E5%BE%AE%E5%8D%9A%E8%AF%84%E8%AE%BA/"/>
     
