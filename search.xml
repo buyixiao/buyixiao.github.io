@@ -4,11 +4,40 @@
   
     
     <entry>
+      <title>开源|一个微博去广告、屏蔽关键词的扩展</title>
+      <link href="/blog/weibo-ads-filter-keyword-blocker.html"/>
+      <url>/blog/weibo-ads-filter-keyword-blocker.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><p>针对 weibo.com 这个站点开发了一款名为微博清理大师的插件，其主要功能如下：</p><p>1、永久去广告。</p><p>2、可添加自定义关键词，你刷到的微博和热搜榜将永远看不到这些关键词，除非你手动删除关键词。</p><p>3、可添加微博用户，你再也刷不到 ta 的微博，也可删除。</p><p>4、微博目前是乱序，插件组织微博按照从新到旧的时间线排列，方便阅读。</p><h3 id="操作介绍"><a href="#操作介绍" class="headerlink" title="操作介绍"></a>操作介绍</h3><p>UI 简单，操作方便。</p><p><img src="https://s2.loli.net/2022/01/27/5A6KUd4p1rwtsVQ.png" alt="配置.png"></p><p>点击上方的 1 处可以增删关键词，2 处可以拉黑、解除拉黑用户。</p><p><img src="https://s2.loli.net/2022/01/27/vSQWJzyrKm3kVPF.png" alt="右键菜单.png"></p><p>也可以选中文字右键添加。</p><h3 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h3><p>原理很简单，就是拦截 weibo.com 相关接口的请求，并修改响应，去掉广告和屏蔽词，并使之按照时间正序排列，然后就是工程实现了。</p><p>相关接口指的是全部微博、特别关注、最新微博、好友圈和热搜榜相关的接口。</p><p>代码已经全部开源在 github 上，感兴趣的同学可以去看看。</p><blockquote><p><a href="https://github.com/Python3Spiders/WeiboFilterExtension">https://github.com/Python3Spiders/WeiboFilterExtension</a></p></blockquote><h3 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h3><p>这个 project 差不多是 2022 年元旦完成的，一直拖到最近才想到上线 Google Chrome 网上应用商店，但是自从 2022 年 1 月 17 起，这个商店就升级了，从技术手段上阻止了很多拦截广告的扩展，这就直接导致了我的插件无法上线 chrome 商店，就算上线了也不会 work。还有一点是，到 2023 年，几乎 chrome 商店里所有拦截广告的扩展都会失效。这波真是 49 年入国军。</p><p>所以目前来看， chrome 使用这个插件并且 work 的话，只能离线安装 crx 文件，crx 文件地址就是上面那个仓库的根目录下的 WeiboFilterExtension.crx 文件。</p><p>下载 crx 文件后，在 chrome 浏览器输入  <code>chrome://extensions/</code> 进入到 chrome 扩展管理页面，然后打开右上方的开发者模式，把这个 crx 文件拖到这个界面即可。</p><p>或者选择源码安装，clone github 地址，选择左上方加载已解压的 扩展程序，选择代码文件夹即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Chrome Extension </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微博 </tag>
+            
+            <tag> chrome 扩展 </tag>
+            
+            <tag> 去广告 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>聚源新闻爬虫及网站介绍</title>
       <link href="/blog/all-news-spider.html"/>
       <url>/blog/all-news-spider.html</url>
       
-        <content type="html"><![CDATA[<h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h3><div class="note primary simple"><p>针对泰晤士报，纽约时报，BBC News 等国外主流媒体进行关键词抓取，针对澎湃新闻，新浪新闻，腾讯新闻等国内主流媒体进行分类抓取。</p></div><div class="note primary simple"><p>短期目前旨在爬取所有新闻门户网站的新闻，每个门户网站爬虫开箱即用，并自动保存到同目录下的 csv/excel 文件中。</p></div><div class="note primary simple"><p>长期目标是打造一个信息流聚合平台，或者进行更高层面的比如社会舆情、新闻地理可视化等的处理。</p></div><h3 id="github-地址"><a href="#github-地址" class="headerlink" title="github 地址"></a>github 地址</h3><p>具体使用可以参考 github 上 demo 和 wiki：</p><p><a href="https://github.com/Python3Spiders/AllNewsSpider">https://github.com/Python3Spiders/AllNewsSpider</a></p><h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p>新闻数据展示网站：</p><p><a href="http://8.142.38.214/">http://8.142.38.214/</a></p><p><img src="https://s2.loli.net/2022/01/22/ofuOjMwS9Q6G43V.png" alt="聚源新闻网站_zip.png"></p><h3 id="项目赞助"><a href="#项目赞助" class="headerlink" title="项目赞助"></a>项目赞助</h3><p>博主维护着不少的开源项目，见于 <a href="https://github.com/inspurer">https://github.com/inspurer</a> ，耗费着大量的时间和精力，如果项目帮助到了你，可以点击下方赞赏，助力项目长期发展。</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h3><div class="note primary simple"><p>针对泰晤士报，纽约时报，BBC News 等国外主流媒体进行关键词抓取，针对澎湃新闻，新浪新闻，腾讯新闻等国内主流媒体进行分类抓取。</p></div><div class="note primary simple"><p>短期目前旨在爬取所有新闻门户网站的新闻，每个门户网站爬虫开箱即用，并自动保存到同目录下的 csv/excel 文件中。</p></div><div class="note primary simple"><p>长期目标是打造一个信息流聚合平台，或者进行更高层面的比如社会舆情、新闻地理可视化等的处理。</p></div><h3 id="github-地址"><a href="#github-地址" class="headerlink" title="github 地址"></a>github 地址</h3><p>具体使用可以参考 github 上的 demo 和 wiki：</p><p><a href="https://github.com/Python3Spiders/AllNewsSpider">https://github.com/Python3Spiders/AllNewsSpider</a></p><h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p>新闻数据展示网站：</p><p><a href="http://8.142.38.214/">http://8.142.38.214/</a></p><p><img src="https://s2.loli.net/2022/01/22/ofuOjMwS9Q6G43V.png" alt="聚源新闻网站_zip.png"></p><h3 id="项目赞助"><a href="#项目赞助" class="headerlink" title="项目赞助"></a>项目赞助</h3><p>博主维护着不少的开源项目，见于 <a href="https://github.com/inspurer">https://github.com/inspurer</a> ，耗费着大量的时间和精力，如果项目帮助到了你，可以点击下方赞赏，助力项目长期发展。</p>]]></content>
       
       
       <categories>
