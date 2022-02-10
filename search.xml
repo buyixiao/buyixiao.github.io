@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>flask 获取被 nginx 反向代理的客户端真实 ip</title>
+      <link href="/blog/client-real-ip-proxy-by-nginx.html"/>
+      <url>/blog/client-real-ip-proxy-by-nginx.html</url>
+      
+        <content type="html"><![CDATA[<p>服务端为了防爬虫或其他用途，需要获取客户端真实 ip，在 flask 中获取客户端 ip 的方法如下:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip = request.remote_addr <span class="comment">#写在 view 中</span></span><br></pre></td></tr></table></figure><p>但是通过 nginx 反向代理后，获取的 ip 全部变成了 127.0.0.1。</p><p>可以在 nginx 中的配置文件中 location 下块添加一行：</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置请求头，并将头信息传递给服务器端</span></span><br><span class="line"><span class="attribute">proxy_set_header</span> X-Real-IP $remote_addr;</span><br></pre></td></tr></table></figure><p>然后在 flask 中通过以下代码就能获取真实 ip 了：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip = request.headers[<span class="string">&#x27;X-Real-IP&#x27;</span>]</span><br></pre></td></tr></table></figure><p>很多类似的教程坑在，只给出一个类似 <code>ip = request.headers[&#39;X-Forwarded-For&#39;] </code>根本不告诉你 headers 的这个 key 是在 nginx 中配置的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> flask </tag>
+            
+            <tag> nginx </tag>
+            
+            <tag> ip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>开源|一个微博去广告、屏蔽关键词的扩展</title>
       <link href="/blog/weibo-ads-filter-keyword-blocker.html"/>
       <url>/blog/weibo-ads-filter-keyword-blocker.html</url>
