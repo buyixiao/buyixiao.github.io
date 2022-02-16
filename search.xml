@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>开源|微博备份助手</title>
+      <link href="/blog/weibo-user-backup.html"/>
+      <url>/blog/weibo-user-backup.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="扩展介绍"><a href="#扩展介绍" class="headerlink" title="扩展介绍"></a>扩展介绍</h3><p>得空写了个微博用户备份助手。</p><p>它的作用是备份用户自己或者任意微博用户的微博数据，并将结果保存到本地的 xlsx 文件。</p><p><img src="https://s2.loli.net/2022/02/16/TKsNObdBpVhultv.png" alt="weibo_backup_show_zip.png"></p><h3 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h3><p>1、确保在浏览器登录了 weibo.cn</p><p>2、在 weibo.cn 或者 weibo.com 站点内的微博用户主页上点击扩展图标，会显示如上图，自动解析数字 uid，然后点击开始抓取按钮即可；如果自动解析失败，可手动输入然后抓取；如果自定义微博主页用户的数字 uid 获取方式为：在它的主页上任意一条微博上的用户名右键在新标签页打开，浏览器地址栏就能看到数字 uid 了。</p><p>3、抓取时请勿离开页面或者关闭扩展，抓取结束会自动保存 lxsx，每 增量 200 条也会全部保存一次到 lxsx，因此抓取过程中会有多个 lxsx 文件生成，以最后的文件为准。</p><h3 id="安装地址"><a href="#安装地址" class="headerlink" title="安装地址"></a>安装地址</h3><p>上线了 google 商城，可一在线安装。</p><blockquote><p><a href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E5%8D%9A%E5%A4%87%E4%BB%BD%E5%8A%A9%E6%89%8B/kbgjdcobjobchmhfddlfjnnlaaoiejla?hl=zh-CN">https://chrome.google.com/webstore/detail/%E5%BE%AE%E5%8D%9A%E5%A4%87%E4%BB%BD%E5%8A%A9%E6%89%8B/kbgjdcobjobchmhfddlfjnnlaaoiejla?hl=zh-CN</a></p></blockquote><p>代码开源在 github，也可通过源码安装。</p><blockquote><p><a href="https://github.com/Python3Spiders/WeiboBackupExtension">https://github.com/Python3Spiders/WeiboBackupExtension</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Chrome Extension </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微博用户爬虫 </tag>
+            
+            <tag> 微博备份 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>flask 获取被 nginx 反向代理的客户端真实 ip</title>
       <link href="/blog/client-real-ip-proxy-by-nginx.html"/>
       <url>/blog/client-real-ip-proxy-by-nginx.html</url>
