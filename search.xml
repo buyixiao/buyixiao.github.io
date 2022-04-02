@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>pandas 分层抽样</title>
+      <link href="/blog/pandas-stratified-sampling.html"/>
+      <url>/blog/pandas-stratified-sampling.html</url>
+      
+        <content type="html"><![CDATA[<p>dataframe 里面有 created_at 一列，格式 <code>%Y-%m-%d %H:%M:%S</code>，首先提取出小时，然后分层（组）抽样，保存到 csv  中，话不多说，上代码~</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2022/4/2 22:58</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;RussiaUkraine1.csv&#x27;</span></span><br><span class="line">output_file = <span class="string">&#x27;RussiaUkraine2.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">df = pd.read_csv(input_file)</span><br><span class="line"><span class="comment"># 新增一列 hour</span></span><br><span class="line">df[<span class="string">&#x27;hour&#x27;</span>] = pd.to_datetime(df[<span class="string">&#x27;created_at&#x27;</span>]).dt.hour  <span class="comment"># 时间</span></span><br><span class="line"><span class="comment"># 抽样比例 1%</span></span><br><span class="line">res_df = df.groupby(df[<span class="string">&#x27;hour&#x27;</span>]).apply(<span class="keyword">lambda</span> x: x.sample(frac=<span class="number">0.01</span>))</span><br><span class="line">res_df.to_csv(output_file, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分层抽样 </tag>
+            
+            <tag> pandas </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ip 访问正常，解析到此 ip 的域名却指向了 nginx 默认首页</title>
       <link href="/blog/domainname-to-nginx-default-but-ip-to-ours.html"/>
       <url>/blog/domainname-to-nginx-default-but-ip-to-ours.html</url>
