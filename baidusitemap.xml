@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://buyixiao.github.io/blog/pandas-stratified-sampling.html</loc>
-    <lastmod>2022-04-02</lastmod>
+    <lastmod>2022-04-13</lastmod>
+  </url>
+  <url>
+    <loc>https://buyixiao.github.io/blog/merge-csv-with-same-columns.html</loc>
+    <lastmod>2022-04-13</lastmod>
   </url>
   <url>
     <loc>https://buyixiao.github.io/blog/weibo-super-spider.html</loc>
