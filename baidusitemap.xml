@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://buyixiao.github.io/blog/merge-csv-with-same-columns.html</loc>
+    <lastmod>2022-04-22</lastmod>
+  </url>
+  <url>
     <loc>https://buyixiao.github.io/blog/one-stop-weibo-visualization.html</loc>
     <lastmod>2022-04-21</lastmod>
   </url>
   <url>
     <loc>https://buyixiao.github.io/blog/pandas-stratified-sampling.html</loc>
-    <lastmod>2022-04-13</lastmod>
-  </url>
-  <url>
-    <loc>https://buyixiao.github.io/blog/merge-csv-with-same-columns.html</loc>
     <lastmod>2022-04-13</lastmod>
   </url>
   <url>
