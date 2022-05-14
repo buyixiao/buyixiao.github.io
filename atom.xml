@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2022-04-24T06:15:42.971Z</updated>
+  <updated>2022-05-14T15:45:21.989Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【持续更新|2022最新】68w 高质量新闻数据集</title>
+    <link href="https://buyixiao.github.io/blog/qualitative-news-dataset.html"/>
+    <id>https://buyixiao.github.io/blog/qualitative-news-dataset.html</id>
+    <published>2022-05-14T15:36:29.000Z</published>
+    <updated>2022-05-14T15:45:21.989Z</updated>
+    
+    <content type="html"><![CDATA[<p>租用服务器，累计半年有余对新浪，腾讯，澎湃三个国内主流新闻站点进行抓取，共计保存 68 w 数据，约 1.8G，导出到本地 csv 花了 5 个小时。</p><p>csv 一共 11 列，分别是：新闻抓取时间，标题，来源，头图，发布时间，链接，分类，关键词（逗号分隔），标签，描述，内容。</p><p>数据收集和整理获取花费大量时间和精力，故收取一定费用。下载地址：</p><p><a href="https://afdian.net/p/67bcb002d38f11ecad6152540025c377">https://afdian.net/p/67bcb002d38f11ecad6152540025c377</a></p><p>数据集不定期增量更新到上述下载地址~</p>]]></content>
+    
+    
+    <summary type="html">抓取腾讯、新浪、澎湃新闻，11个字段，1.8G，68w 条</summary>
+    
+    
+    
+    <category term="爬虫" scheme="https://buyixiao.github.io/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="新闻" scheme="https://buyixiao.github.io/tags/%E6%96%B0%E9%97%BB/"/>
+    
+    <category term="数据集" scheme="https://buyixiao.github.io/tags/%E6%95%B0%E6%8D%AE%E9%9B%86/"/>
+    
+  </entry>
   
   <entry>
     <title>话『雨』</title>
@@ -482,29 +505,6 @@
     <category term="换源" scheme="https://buyixiao.github.io/tags/%E6%8D%A2%E6%BA%90/"/>
     
     <category term="requests" scheme="https://buyixiao.github.io/tags/requests/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写在 BuyiXiao&#39;s Blog 开始</title>
-    <link href="https://buyixiao.github.io/blog/why-buyixiao-blog-start.html"/>
-    <id>https://buyixiao.github.io/blog/why-buyixiao-blog-start.html</id>
-    <published>2022-01-16T12:56:22.000Z</published>
-    <updated>2022-01-17T12:12:43.294Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="who-is-buyixiao"><a href="#who-is-buyixiao" class="headerlink" title="who is buyixiao"></a>who is buyixiao</h2><p>buyixiao 行不改名，坐不改姓；江湖人称 <font color="red">肖不已</font>，或者 <font color="red">布衣肖</font>；三尺微命，一介书生，不足挂齿。<br>buyixiao 在这个互联网中还有其他两个亲兄弟，一个叫 <a href="https://inspurer.github.io/">inspurer</a>，还有一个叫 <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUzMDE5MzQ3Ng==#wechat_redirect">月小水长</a>。</p><h2 id="buyixiao’s-skills"><a href="#buyixiao’s-skills" class="headerlink" title="buyixiao’s skills"></a>buyixiao’s skills</h2><p>写过数据分析可视化，会一点爬虫，前 Android 不知名工程师，上线过小程序和 Chrome 扩展，还是一个 Python 全沾工程师…</p><p>之前在某大厂干过开发，现在在家里睡大觉。</p><h2 id="buyixiao’s-blog"><a href="#buyixiao’s-blog" class="headerlink" title="buyixiao’s blog"></a>buyixiao’s blog</h2><p>关于为什么要开这个 blog，有两个原因。</p><p>第一层次的原因是，buyixiao 之前在公众号更新文章，但是该生态比较封闭，而且无法很好修改发布过的文章，还有其他各种限制，所以急切需要一个自主可控的博客系统。</p><p>另一个是因为，buyixiao 老大哥  <a href="https://inspurer.github.io/">inspurer 的个人博客</a> 源代码已经不可考了，而且网站历史包袱太重，包括样式，渲染速度等都积重难返了，所以有 <a href="https://buyixiao.github.io/">buyixiao’s blog</a> 弟承兄业。</p><p>所以这篇文章，还是有一点序的意思。</p>]]></content>
-    
-    
-    <summary type="html">简单说说为什么要开这个博客</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://buyixiao.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="buyixiao" scheme="https://buyixiao.github.io/tags/buyixiao/"/>
-    
-    <category term="inspurer" scheme="https://buyixiao.github.io/tags/inspurer/"/>
     
   </entry>
   

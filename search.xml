@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>【持续更新|2022最新】68w 高质量新闻数据集</title>
+      <link href="/blog/qualitative-news-dataset.html"/>
+      <url>/blog/qualitative-news-dataset.html</url>
+      
+        <content type="html"><![CDATA[<p>租用服务器，累计半年有余对新浪，腾讯，澎湃三个国内主流新闻站点进行抓取，共计保存 68 w 数据，约 1.8G，导出到本地 csv 花了 5 个小时。</p><p>csv 一共 11 列，分别是：新闻抓取时间，标题，来源，头图，发布时间，链接，分类，关键词（逗号分隔），标签，描述，内容。</p><p>数据收集和整理获取花费大量时间和精力，故收取一定费用。下载地址：</p><p><a href="https://afdian.net/p/67bcb002d38f11ecad6152540025c377">https://afdian.net/p/67bcb002d38f11ecad6152540025c377</a></p><p>数据集不定期增量更新到上述下载地址~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 新闻 </tag>
+            
+            <tag> 数据集 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>话『雨』</title>
       <link href="/blog/something-about-rain.html"/>
       <url>/blog/something-about-rain.html</url>
