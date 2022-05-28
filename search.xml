@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>pandas 分组频率统计</title>
+      <link href="/blog/pandas-groupby-frequency-statistics.html"/>
+      <url>/blog/pandas-groupby-frequency-statistics.html</url>
+      
+        <content type="html"><![CDATA[<p>假设有一个 dataframe 如下：</p><table><thead><tr><th align="center">country_name</th><th align="center">date</th></tr></thead><tbody><tr><td align="center">中国</td><td align="center">20030101</td></tr><tr><td align="center">安提瓜和巴布达</td><td align="center">20030101</td></tr><tr><td align="center">中国</td><td align="center">20030102</td></tr><tr><td align="center">蒙古</td><td align="center">20030102</td></tr></tbody></table><p>现在要统计每天每个国家在当天出现的频率，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2022/5/28 20:10</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># website           https://buyixiao.github.io/</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;all_country.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">df = pd.read_csv(input_file)</span><br><span class="line"></span><br><span class="line">res_df = df.groupby([<span class="string">&#x27;date&#x27;</span>, <span class="string">&#x27;country_name&#x27;</span>]).count().reset_index()</span><br><span class="line"></span><br><span class="line">res_df = res_df[res_df.columns[:<span class="number">3</span>]]</span><br><span class="line"></span><br><span class="line">res_df.rename(columns=&#123;<span class="string">&#x27;标题&#x27;</span>: <span class="string">&#x27;daily_cnt&#x27;</span>&#125;, inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(res_df, res_df.columns)</span><br><span class="line"></span><br><span class="line">res_df[<span class="string">&#x27;daily_frq&#x27;</span>] = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(res_df.shape[<span class="number">0</span>])]</span><br><span class="line"><span class="keyword">for</span> index, row <span class="keyword">in</span> res_df.iterrows():</span><br><span class="line">    res_df.loc[index, <span class="string">&#x27;daily_frq&#x27;</span>] = <span class="built_in">round</span>(row[<span class="string">&#x27;daily_cnt&#x27;</span>] / df[df[<span class="string">&#x27;date&#x27;</span>] == row[<span class="string">&#x27;date&#x27;</span>]].shape[<span class="number">0</span>], <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">res_df.to_csv(<span class="string">&quot;res_&quot;</span> + input_file, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如有更优雅的方式（肯定有），请批评指正~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pandas </tag>
+            
+            <tag> groupby </tag>
+            
+            <tag> frequency </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【持续更新|2022最新】68w 高质量新闻数据集</title>
       <link href="/blog/qualitative-news-dataset.html"/>
       <url>/blog/qualitative-news-dataset.html</url>
