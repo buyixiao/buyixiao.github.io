@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://buyixiao.github.io/blog/all-news-spider.html</loc>
+    <lastmod>2022-05-31</lastmod>
+  </url>
+  <url>
     <loc>https://buyixiao.github.io/blog/pandas-groupby-frequency-statistics.html</loc>
     <lastmod>2022-05-28</lastmod>
   </url>
@@ -31,10 +35,6 @@
   <url>
     <loc>https://buyixiao.github.io/blog/domainname-to-nginx-default-but-ip-to-ours.html</loc>
     <lastmod>2022-03-10</lastmod>
-  </url>
-  <url>
-    <loc>https://buyixiao.github.io/blog/all-news-spider.html</loc>
-    <lastmod>2022-02-28</lastmod>
   </url>
   <url>
     <loc>https://buyixiao.github.io/blog/weibo-user-backup.html</loc>
