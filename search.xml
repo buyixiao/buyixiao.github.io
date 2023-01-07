@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>pandas 筛选某列值出现至少 N 次的行</title>
+      <link href="/blog/pandas-value-counts.html"/>
+      <url>/blog/pandas-value-counts.html</url>
+      
+        <content type="html"><![CDATA[<p>假设有一个 dataframe 如下：</p><table><thead><tr><th align="center">user_name</th><th align="center">publish_time</th><th align="center">content</th></tr></thead><tbody><tr><td align="center">小明</td><td align="center">2022-12-30 15:10:00</td><td align="center">今天是 2022 年最后一天，我在广东</td></tr><tr><td align="center">小刚</td><td align="center">2022-01-01 12:23:33</td><td align="center">今天是 2022 年第一天，我在加勒比</td></tr><tr><td align="center">小王</td><td align="center">2022-01-01 12:33:00</td><td align="center">今天是 2022 年第一天，我在小刚身边</td></tr><tr><td align="center">小刚</td><td align="center">2023-01-01 02:15:45</td><td align="center">今天是 2023 年第一天，我在百慕大</td></tr><tr><td align="center">小明</td><td align="center">2023-01-01 00:05:20</td><td align="center">今天是 2023 年第一天，我还在广东</td></tr></tbody></table><p>现在我们要统计 user_name 中出现两次以上的行。肉眼可以看出就是小明、小刚各自两行共四行。其代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2023/1/7 8:58</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># website           https://buyixiao.github.io/</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;../狂人日记 2022.csv&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">remove_show_count_below_n</span>(<span class="params">input_file, col, n=<span class="number">2</span></span>):</span></span><br><span class="line">    df = pd.read_csv(input_file)</span><br><span class="line"></span><br><span class="line">    count_df = pd.DataFrame(df[col].value_counts())</span><br><span class="line">    count_df.columns = [<span class="string">&#x27;count&#x27;</span>]</span><br><span class="line">    not_below_n_index = count_df[count_df[<span class="string">&#x27;count&#x27;</span>] &gt;= n].index</span><br><span class="line">    df = df[df[col].isin(not_below_n_index)]</span><br><span class="line"></span><br><span class="line">    df.to_csv(<span class="string">&#x27;result.csv&#x27;</span>, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">remove_show_count_below_n(input_file, col=<span class="string">&#x27;user_name&#x27;</span>)</span><br></pre></td></tr></table></figure><p>如有更优雅的方式（肯定有），请批评指正～</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pandas </tag>
+            
+            <tag> frequency </tag>
+            
+            <tag> value_counts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>android camera2 实战经验汇总</title>
       <link href="/blog/android-camera2.html"/>
       <url>/blog/android-camera2.html</url>
