@@ -45,9 +45,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> crontab </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -72,11 +72,11 @@
       
         <tags>
             
-            <tag> filter </tag>
-            
             <tag> groupby </tag>
             
             <tag> pandas </tag>
+            
+            <tag> filter </tag>
             
         </tags>
       
@@ -101,9 +101,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> frequency </tag>
+            
+            <tag> pandas </tag>
             
             <tag> value_counts </tag>
             
@@ -161,9 +161,9 @@
             
             <tag> groupby </tag>
             
-            <tag> pandas </tag>
-            
             <tag> frequency </tag>
+            
+            <tag> pandas </tag>
             
         </tags>
       
@@ -379,9 +379,9 @@
             
             <tag> python </tag>
             
-            <tag> flask </tag>
-            
             <tag> nginx </tag>
+            
+            <tag> flask </tag>
             
             <tag> ip </tag>
             
