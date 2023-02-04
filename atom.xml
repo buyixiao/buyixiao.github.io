@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2023-02-04T08:48:57.612Z</updated>
+  <updated>2023-02-04T09:03:43.995Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>塞缪尔·厄尔曼：青春</title>
+    <link href="https://buyixiao.github.io/blog/youth-by-samuel-ullman.html"/>
+    <id>https://buyixiao.github.io/blog/youth-by-samuel-ullman.html</id>
+    <published>2023-02-04T08:56:14.000Z</published>
+    <updated>2023-02-04T09:03:43.995Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>《青春》作者是德裔美国作家塞缪尔·厄尔曼。</p></blockquote><h2 id="中文译文"><a href="#中文译文" class="headerlink" title="中文译文"></a>中文译文</h2><p>青春不是年华，而是心境；青春不是桃面、丹唇、柔膝，而是深沉的意志、恢宏的想象、炽热的感情；青春是生命的深泉在涌流。</p><p>青春气贯长虹，勇锐盖过怯弱，进取压倒苟安。如此锐气，二十后生有之，六旬男子则更多见。年岁有加，并非垂老；理想丢弃，方堕暮年。岁月悠悠，衰微只及肌肤；热忱抛却，颓唐必致灵魂。忧烦，惶恐，丧失自信，定使心灵扭曲，意气如灰。</p><p>无论年届花甲，抑或二八芳龄，心中皆有生命之欢乐，奇迹之诱惑，孩童般天真久盛不衰。</p><p>人人心中皆有一台天线，只要你从天上人间接受美好、希望、欢乐、勇气和力量的信号，你无不青春永驻、风华长存。</p><p>一旦天线降下，锐气便被冰雪覆盖，玩世不恭、自暴自弃油然而生，即便年方二十，实已垂垂老矣；然则只要竖起天线，捕捉乐观信号，你就有望在八十高龄告别尘寰时仍觉年轻。</p><h2 id="英文原文"><a href="#英文原文" class="headerlink" title="英文原文"></a>英文原文</h2><p>《YOUTH 》 by Samuel Ullman</p><p>Youth is not a time of life; it is a state of mind; it is not a matter of rosy cheeks, red lips and supple knees; it is a matter of the will, a quality of the imagination, a vigor of the emotions; it is the freshness of the deep springs of life.</p><p>Youth means a temperamental predominance of courage over timidity of the appetite, for adventure over the love of ease. This often exists in a man of sixty more than a boy of twenty. Nobody grows old merely by a number of years. We grow old by deserting our ideals.</p><p>Years may wrinkle the skin, but to give up enthusiasm wrinkles the soul. Worry, fear, self-distrust bows the heart and turns the spirit back to dust.</p><p>Whether sixty or sixteen, there is in every human being’s heart the lure of wonder, the unfailing child-like appetite of what’s next, and the joy of the game of living. In the center of your heart and my heart there is a wireless station; so long as it receives messages of beauty, hope, cheer, courage and power from men and from the infinite, so long are you young.</p><p>When the aerials are down, and your spirit is covered with snows of cynicism and the ice of pessimism, then you are grown old, even at twenty, but as long as your aerials are up, to catch the waves of optimism, there is hope you may die young at eighty.</p>]]></content>
+    
+    
+    <summary type="html">青春气贯长虹，勇锐盖过怯弱，进取压倒苟安。</summary>
+    
+    
+    
+    <category term="励志" scheme="https://buyixiao.github.io/categories/%E5%8A%B1%E5%BF%97/"/>
+    
+    
+    <category term="青春" scheme="https://buyixiao.github.io/tags/%E9%9D%92%E6%98%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>crontab 定时执行 Python 脚本踩坑记录</title>
@@ -472,29 +493,6 @@
     <category term="水军" scheme="https://buyixiao.github.io/tags/%E6%B0%B4%E5%86%9B/"/>
     
     <category term="营销号" scheme="https://buyixiao.github.io/tags/%E8%90%A5%E9%94%80%E5%8F%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微博明星关系网络可视化</title>
-    <link href="https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html"/>
-    <id>https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html</id>
-    <published>2022-01-20T11:08:19.000Z</published>
-    <updated>2022-01-20T11:31:46.607Z</updated>
-    
-    <content type="html"><![CDATA[<p>抓取微博指定用户的关注信息，并做了一定的可视化工作。下面以抓取明星关注为例，阐述从抓取数据，到关系网络的构造，最后使用 gephi 可视化的全流程。</p><p>第一步，以一个<strong>给定的明星 uid 为起点，爬取它的关注，接着爬关注的关注</strong>…从形式上看是一个<strong>递归的网络</strong>，所以设计了一个<strong>递归的爬虫</strong>，可以指定抓取指定的层数，断网或其他出错可以从上次爬到的地方继续；一般来说 3 层就非常多，以一个明星关注 100 个明星为例，第一层只有起点明星，第二层有 100 个明星，第三层就有 10000 个明星了，我使用<strong>杨幂</strong>的 uid 为起点，抓取 3 层网络，实测抓到了 2w+ 明星，20w+ 对明星关注关系，最后随机抽了 5000 条关注关系，2000 余明星。</p><p>第二步，根据上一步得到的数据构造<strong>关系矩阵</strong>，方便 gephi 可视化输入。这个关系矩阵需要两个 csv 文件表示，一个节点 <strong>nodes.csv</strong> 文件，另一个边表 <strong>edges.csv</strong> 文件。</p><p>nodes.csv 四个字段，id 即该明星的微博 userId，label 是其名字，weight 是在关系网络中被关注的次数，class 是 <strong>louvain</strong> 聚类的结果。</p><p>edges.csv 三个字段：source,target,weight，分别对应边的起点、终点、权重。</p><p>gephi 最终的效果图示：</p><p><img src="https://s2.loli.net/2022/01/20/CD1jH6aoOyE5bFN.png" alt="全景图.png"></p><p><img src="https://s2.loli.net/2022/01/20/jKC7VkRoaApzu84.png" alt="网络边缘放大图.png"></p><p><img src="https://s2.loli.net/2022/01/20/Gk7P5DENsSVH9Q4.png" alt="网络中心放大图.png"></p><p>谁是十八线，谁是一线，一目了然，各位明星，如有冒犯，纯属无心之举。</p><p>动态效果可以参考视频：</p><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="//player.bilibili.com/player.html?aid=593321690&bvid=BV1dq4y1k7g8&cid=488583955&page=1"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div><p>本文首发： <a href="https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html">BuyiXiao’s Blog</a></p><p>链接地址：<a href="https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html">https://buyixiao.github.io/blog/weibo-superstar-relation-network-visual.html</a></p><p>转载需注明来源。</p>]]></content>
-    
-    
-    <summary type="html">利用 Python3 爬虫和 gephi，可视化明星关系网络，看出谁是一线谁是十八线</summary>
-    
-    
-    
-    <category term="可视化" scheme="https://buyixiao.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-    
-    <category term="可视化" scheme="https://buyixiao.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-    <category term="关系网络" scheme="https://buyixiao.github.io/tags/%E5%85%B3%E7%B3%BB%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
