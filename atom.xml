@@ -77,11 +77,11 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
+    <category term="filter" scheme="https://buyixiao.github.io/tags/filter/"/>
+    
     <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
     
     <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
-    
-    <category term="filter" scheme="https://buyixiao.github.io/tags/filter/"/>
     
   </entry>
   
@@ -102,11 +102,11 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
-    
     <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
     <category term="value_counts" scheme="https://buyixiao.github.io/tags/value-counts/"/>
+    
+    <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
     
   </entry>
   
@@ -154,9 +154,9 @@
     
     <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
     
-    <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
-    
     <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
+    <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
     
   </entry>
   
@@ -338,9 +338,9 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="python" scheme="https://buyixiao.github.io/tags/python/"/>
-    
     <category term="nginx" scheme="https://buyixiao.github.io/tags/nginx/"/>
+    
+    <category term="python" scheme="https://buyixiao.github.io/tags/python/"/>
     
     <category term="flask" scheme="https://buyixiao.github.io/tags/flask/"/>
     

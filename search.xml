@@ -72,11 +72,11 @@
       
         <tags>
             
+            <tag> filter </tag>
+            
             <tag> groupby </tag>
             
             <tag> pandas </tag>
-            
-            <tag> filter </tag>
             
         </tags>
       
@@ -101,11 +101,11 @@
       
         <tags>
             
-            <tag> frequency </tag>
-            
             <tag> pandas </tag>
             
             <tag> value_counts </tag>
+            
+            <tag> frequency </tag>
             
         </tags>
       
@@ -161,9 +161,9 @@
             
             <tag> groupby </tag>
             
-            <tag> frequency </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> frequency </tag>
             
         </tags>
       
@@ -377,9 +377,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> nginx </tag>
+            
+            <tag> python </tag>
             
             <tag> flask </tag>
             
