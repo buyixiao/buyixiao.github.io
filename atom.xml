@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2023-03-01T08:00:55.191Z</updated>
+  <updated>2023-03-08T14:59:50.929Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pandas 拆分具有相同结构的 csv</title>
+    <link href="https://buyixiao.github.io/blog/split-csv-with-same-columns.html"/>
+    <id>https://buyixiao.github.io/blog/split-csv-with-same-columns.html</id>
+    <published>2023-03-08T14:47:08.000Z</published>
+    <updated>2023-03-08T14:59:50.929Z</updated>
+    
+    <content type="html"><![CDATA[<p>在教程 <a href="https://buyixiao.github.io/blog/merge-csv-with-same-columns.html">pandas 合并具有相同结构的 csv</a> 中，我们分享了如何将一个文件夹下很多具有相同结构的 csv 文件合并为一个总的 csv 文件的代码，今天分享的是如何从这个总的 csv 文件还原成原来的一堆子文件，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2022/8/16 14:07</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># website           https://buyixiao.github.io/</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;all.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">output_folder = <span class="string">&#x27;result&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_folder):</span><br><span class="line">    os.mkdir(output_folder)</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(input_file, float_precision=<span class="string">&#x27;round-trip&#x27;</span>)</span><br><span class="line">groups = df.groupby(df[<span class="string">&#x27;origin_file_name&#x27;</span>])</span><br><span class="line"><span class="keyword">for</span> group <span class="keyword">in</span> groups:</span><br><span class="line">    group[<span class="number">1</span>].drop(<span class="string">&#x27;origin_file_name&#x27;</span>, axis=<span class="number">1</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">    group[<span class="number">1</span>].to_csv(os.path.join(output_folder, <span class="string">&#x27;&#123;&#125;.csv&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(group[<span class="number">0</span>]))), index=<span class="literal">False</span>,</span><br><span class="line">                    encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>)</span><br></pre></td></tr></table></figure><p>如有错误欢迎指正，如有更优解决方案请赐教~</p>]]></content>
+    
+    
+    <summary type="html">本系列教程【合并具有相同结构的 csv】的逆过程</summary>
+    
+    
+    
+    <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
+    
+    
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
+    <category term="csv 拆分" scheme="https://buyixiao.github.io/tags/csv-%E6%8B%86%E5%88%86/"/>
+    
+  </entry>
   
   <entry>
     <title>【动态规划】刷题记录</title>
@@ -466,29 +489,6 @@
     
     
     <category term="李开复" scheme="https://buyixiao.github.io/tags/%E6%9D%8E%E5%BC%80%E5%A4%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>新微博通知 chrome 扩展使用介绍</title>
-    <link href="https://buyixiao.github.io/blog/new-weibo-notify-chrome-extension.html"/>
-    <id>https://buyixiao.github.io/blog/new-weibo-notify-chrome-extension.html</id>
-    <published>2022-01-20T12:03:48.000Z</published>
-    <updated>2022-01-20T12:35:04.626Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>博主开发的新微博通知助手，已上架谷歌扩展商城：<a href="https://chrome.google.com/webstore/detail/%E5%BE%AE%E5%8D%9A%E9%80%9A%E7%9F%A5%E5%8A%A9%E6%89%8B/cpmlmjdimlnhgnakcjfmbmfglhkaoago?hl=zh-CN">点击前往商城免费安装</a>。</p><p>它的作用是接收指定微博用户的最新微博通知（不包括置顶微博）。</p><p>它的特色是不需要 Cookie，不需要登录无状态即可收到桌面通知。</p><p>它的操作也特别简单，自动解析 uid，点击保存即可。</p><p><img src="https://s2.loli.net/2022/01/20/ygVbRSAwGJXvO7Y.png" alt="chrome_extension_zip.png"></p><p>然后插件就会定时 20s 去轮询这个人的微博状态，一有它的最新微博就会有系统级的桌面通知。</p><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><p>1、注意解析的地址栏，必须是微博数字 uid，微博用户自定义域名的 id 不行。比如谢娜的微博主页自定义成 xiena，但是每一个微博用户都有数字 uid 的，怎么找呢，秘诀就是在这个微博用户任意一条的微博的用户名上右键在新 tab 打开链接，然后地址栏就有数字 uid 了。</p><p>这样自动解析成功，点击保存就能接受新微博通知了。</p><p>无论自动解析成否，也可以手动输入数字 uid；可以在上图 2 处输入框输入，也可以在上图 3 处 add uid 输入。保存的 uid 实时显示在 3 处浅绿色标签，一个 uid 对应一个标签。可以点击标签上的 X 删除 uid。</p><p>2、明明保存了配置，显示添加成功，也有新微博了，就是收不到通知？</p><p>可能在电脑的设置里关闭了 Chrome 的桌面通知权限？打开即可。</p><p>浏览器在后台或前台运行的话，能实时通知，如果关闭了，下次打开也能收到最新通知。</p><p>如果没网络那就肯定收不到通知了。</p><p>3、轮询时间不可设置</p><p>轮询时间也不能设置，固定 20s。何哉？因为本插件的定位是非常克制的，没有 cookie，登录，无状态。如果想同时接收很多人的通知，建议直接在浏览器打开 weibo.com。本插件的最佳食用方式是少量的 uid，uid 对应的博主不频繁发微博这种。</p>]]></content>
-    
-    
-    <summary type="html">不登录，零状态，低配置，博主开发的一个新微博通知的 chrome 扩展</summary>
-    
-    
-    
-    <category term="Chrome Extension" scheme="https://buyixiao.github.io/categories/Chrome-Extension/"/>
-    
-    
-    <category term="微博" scheme="https://buyixiao.github.io/tags/%E5%BE%AE%E5%8D%9A/"/>
-    
-    <category term="chrome 扩展" scheme="https://buyixiao.github.io/tags/chrome-%E6%89%A9%E5%B1%95/"/>
     
   </entry>
   

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>pandas 拆分具有相同结构的 csv</title>
+      <link href="/blog/split-csv-with-same-columns.html"/>
+      <url>/blog/split-csv-with-same-columns.html</url>
+      
+        <content type="html"><![CDATA[<p>在教程 <a href="https://buyixiao.github.io/blog/merge-csv-with-same-columns.html">pandas 合并具有相同结构的 csv</a> 中，我们分享了如何将一个文件夹下很多具有相同结构的 csv 文件合并为一个总的 csv 文件的代码，今天分享的是如何从这个总的 csv 文件还原成原来的一堆子文件，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2022/8/16 14:07</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># website           https://buyixiao.github.io/</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;all.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">output_folder = <span class="string">&#x27;result&#x27;</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(output_folder):</span><br><span class="line">    os.mkdir(output_folder)</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(input_file, float_precision=<span class="string">&#x27;round-trip&#x27;</span>)</span><br><span class="line">groups = df.groupby(df[<span class="string">&#x27;origin_file_name&#x27;</span>])</span><br><span class="line"><span class="keyword">for</span> group <span class="keyword">in</span> groups:</span><br><span class="line">    group[<span class="number">1</span>].drop(<span class="string">&#x27;origin_file_name&#x27;</span>, axis=<span class="number">1</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">    group[<span class="number">1</span>].to_csv(os.path.join(output_folder, <span class="string">&#x27;&#123;&#125;.csv&#x27;</span>.<span class="built_in">format</span>(<span class="built_in">str</span>(group[<span class="number">0</span>]))), index=<span class="literal">False</span>,</span><br><span class="line">                    encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>)</span><br></pre></td></tr></table></figure><p>如有错误欢迎指正，如有更优解决方案请赐教~</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> pandas </tag>
+            
+            <tag> csv 拆分 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【动态规划】刷题记录</title>
       <link href="/blog/dynamic-programming-notes.html"/>
       <url>/blog/dynamic-programming-notes.html</url>
