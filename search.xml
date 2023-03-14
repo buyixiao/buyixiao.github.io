@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>CBDB 历史人物关系和足迹可视化</title>
+      <link href="/blog/historical-figure-visual.html"/>
+      <url>/blog/historical-figure-visual.html</url>
+      
+        <content type="html"><![CDATA[<p>中国历代人物传记资料库（CBDB）是在社会学科领域有着鼎鼎大名，它系统性地收入了中国历史上所有重要的传记资料，其项目主页地址如下：</p><p><a href="https://projects.iq.harvard.edu/chinesecbdb">https://projects.iq.harvard.edu/chinesecbdb</a></p><p>我最开始接触到这个数据库还是我大二时候，然后那时我一无所能，面对这么庞大的数据库无从下手。等到后面学了数据库基本原理和技术，以及一点数据分析可视化技巧后，才陆陆续续有了一些可以实现的 idea，于是上周日完成了一些可能相对古早的 idea，一并部署上线，页面地址为：</p><p><a href="https://tools.buyixiao.xyz/historical-figure-query">https://tools.buyixiao.xyz/historical-figure-query</a></p><p>页面长这样，非常简洁。</p><p><img src="https://s2.loli.net/2023/03/14/9wuKHqrjS3ngibY.png"></p><p>页面功能概括如下：只需要输入一个历史人物名（CBDB 共收录 52w 余人），就能生成该人物的社会关系图、亲属关系图以及此人在华夏大地留下的足迹图。</p><p>人海浮沉几万里，此心安处是吾乡，苏东坡的一生，几乎都是在漂泊中度过的。下文将用今天分享的工具，从一个小角度看见大才子。</p><p>在页面上输入苏轼并回车，可得：</p><p><img src="https://s2.loli.net/2023/03/14/7wod2tv3h5xIe9z.png"></p><p>​        苏轼，男，宋朝人，生于公元 1036 年，卒于公元 1101 年，享年 66 岁。</p><p><img src="https://s2.loli.net/2023/03/14/bjIDNFRzM58rum7.png"></p><p>苏轼的社会关系（包括敌人、朋友等等）非常复杂，大部分是诗文雅趣之事，也有惨遭小人攻讦之难。</p><p><img src="https://s2.loli.net/2023/03/14/eN7PkOy3MgxpujE.png"></p><p>相比较之下，苏轼的亲属关系就显得简单许多，这大概和传记对其家人（可能苏洵、苏辙除外）记载并不多。</p><p><img src="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png"></p><p>苏轼是四川眉山人，出生于 1036 年，在 1056 年以前，也就是他人生的前二十年，几乎都是在巴山夜雨中度过的，然后前往北宋都城开封应试，遇见伯乐欧阳修，就在他名动京师之时，母亲去世，苏轼携本家一大一小二苏回川奔丧，守丧期满后至凤翔府做官。（如果前往网页，上面的地图可放大缩小，这些旅程可以看得很清）</p><p>因和主持变法的王安石政见不和，自请出任杭州通判，江南风月好哇，于是就有了欲把西湖比西子，有了苏堤春晓、三潭映月，还有那令人垂涎三尺的东坡肉。（按史实考，实际上修浚西湖是他再任杭州时的政绩）</p><p>苏轼说，”古之成大事者，不唯有超世之才，亦必有坚韧不拔之志“，诚不我欺，乌台诗案给予了苏轼沉重打击，被迫下放黄州团练副使，楚水本是凄凉地，触景伤情，可是苏东坡是谁哇，在赤壁古战场，他惊叹，”此非曹孟德之诗乎？西望夏口，东望武昌，山川相缪，郁乎苍苍“；”酾酒临江，横槊赋诗，固一世之雄也，而今安在哉？“，他豁然；”寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风“，他哀伤。当然，他也自嘲，“但少闲人如吾两人耳。”</p><p>毛色日益衰，志气日益微呐，五十九岁的大才子还要被连贬至惠州，岭南何许地也，屈原笔下的莽荒之地，可是此心安处即是他苏东坡的乡，“日啖荔枝三百颗，不辞长作岭南人。”大快朵颐，岂不美哉？值得一提是，苏轼同样给惠州人民带了一个西湖，同为 5A 景区，世人只知杭州西湖，却不知惠州西湖。</p><p>心似浮萍，台海波摇呐，花甲老人被再贬至更偏僻的儋州，孤岛夜月，何其凄怆？可他是筚路蓝缕人。</p><blockquote><p>摘自百度百科：苏轼把儋州当成了自己的第二故乡，“我本儋耳氏，寄生西蜀州”。他在这里办学堂，介学风，以致许多人不远千里，追至儋州，从苏轼学。在宋代一百多年里，海南从没有人进士及第。但苏轼北归不久，这里的姜唐佐就举乡贡。为此苏轼题诗：“沧海何曾断地脉，珠崖从此破天荒。”人们一直把苏轼看作是儋州文化的开拓者、播种人，对他怀有深深的崇敬。</p></blockquote><p>宋徽宗大赦天下，苏轼北归，途经廉州、永州，于 公元1101 年病逝于常州，上述地图中北归旅程清晰可见。</p><p>好的，走远了，这其实是一篇野生的技术文。本文只是以苏轼为例，可以在页面上输入任何历史名人，欢迎大家访问工具页面，复制下述地址到浏览器打开或者点击<a href="https://tools.buyixiao.xyz/historical-figure-query">阅读原文</a>（如果访问不了那就是服务器过载了，稍等就好）</p><p><a href="https://tools.buyixiao.xyz/historical-figure-query">https://tools.buyixiao.xyz/historical-figure-query</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 可视化 </tag>
+            
+            <tag> CBDB </tag>
+            
+            <tag> 历史人物 </tag>
+            
+            <tag> 关系网络 </tag>
+            
+            <tag> 生平足迹 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pandas 拆分具有相同结构的 csv</title>
       <link href="/blog/split-csv-with-same-columns.html"/>
       <url>/blog/split-csv-with-same-columns.html</url>
@@ -99,9 +132,9 @@
       
         <tags>
             
-            <tag> crontab </tag>
-            
             <tag> python </tag>
+            
+            <tag> crontab </tag>
             
         </tags>
       
@@ -126,11 +159,11 @@
       
         <tags>
             
+            <tag> pandas </tag>
+            
             <tag> filter </tag>
             
             <tag> groupby </tag>
-            
-            <tag> pandas </tag>
             
         </tags>
       
@@ -213,9 +246,9 @@
       
         <tags>
             
-            <tag> groupby </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> groupby </tag>
             
             <tag> frequency </tag>
             
@@ -321,9 +354,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> 分层抽样 </tag>
+            
+            <tag> pandas </tag>
             
         </tags>
       
@@ -603,9 +636,9 @@
       
         <tags>
             
-            <tag> 微博评论 </tag>
-            
             <tag> 可视化 </tag>
+            
+            <tag> 微博评论 </tag>
             
             <tag> 水军 </tag>
             
@@ -661,9 +694,9 @@
       
         <tags>
             
-            <tag> 微博关系网络 </tag>
-            
             <tag> 可视化 </tag>
+            
+            <tag> 微博关系网络 </tag>
             
         </tags>
       

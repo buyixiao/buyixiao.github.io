@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2023-03-08T14:59:50.929Z</updated>
+  <updated>2023-03-14T07:09:37.438Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CBDB 历史人物关系和足迹可视化</title>
+    <link href="https://buyixiao.github.io/blog/historical-figure-visual.html"/>
+    <id>https://buyixiao.github.io/blog/historical-figure-visual.html</id>
+    <published>2023-03-14T06:52:25.000Z</published>
+    <updated>2023-03-14T07:09:37.438Z</updated>
+    
+    <content type="html"><![CDATA[<p>中国历代人物传记资料库（CBDB）是在社会学科领域有着鼎鼎大名，它系统性地收入了中国历史上所有重要的传记资料，其项目主页地址如下：</p><p><a href="https://projects.iq.harvard.edu/chinesecbdb">https://projects.iq.harvard.edu/chinesecbdb</a></p><p>我最开始接触到这个数据库还是我大二时候，然后那时我一无所能，面对这么庞大的数据库无从下手。等到后面学了数据库基本原理和技术，以及一点数据分析可视化技巧后，才陆陆续续有了一些可以实现的 idea，于是上周日完成了一些可能相对古早的 idea，一并部署上线，页面地址为：</p><p><a href="https://tools.buyixiao.xyz/historical-figure-query">https://tools.buyixiao.xyz/historical-figure-query</a></p><p>页面长这样，非常简洁。</p><p><img src="https://s2.loli.net/2023/03/14/9wuKHqrjS3ngibY.png"></p><p>页面功能概括如下：只需要输入一个历史人物名（CBDB 共收录 52w 余人），就能生成该人物的社会关系图、亲属关系图以及此人在华夏大地留下的足迹图。</p><p>人海浮沉几万里，此心安处是吾乡，苏东坡的一生，几乎都是在漂泊中度过的。下文将用今天分享的工具，从一个小角度看见大才子。</p><p>在页面上输入苏轼并回车，可得：</p><p><img src="https://s2.loli.net/2023/03/14/7wod2tv3h5xIe9z.png"></p><p>​        苏轼，男，宋朝人，生于公元 1036 年，卒于公元 1101 年，享年 66 岁。</p><p><img src="https://s2.loli.net/2023/03/14/bjIDNFRzM58rum7.png"></p><p>苏轼的社会关系（包括敌人、朋友等等）非常复杂，大部分是诗文雅趣之事，也有惨遭小人攻讦之难。</p><p><img src="https://s2.loli.net/2023/03/14/eN7PkOy3MgxpujE.png"></p><p>相比较之下，苏轼的亲属关系就显得简单许多，这大概和传记对其家人（可能苏洵、苏辙除外）记载并不多。</p><p><img src="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png"></p><p>苏轼是四川眉山人，出生于 1036 年，在 1056 年以前，也就是他人生的前二十年，几乎都是在巴山夜雨中度过的，然后前往北宋都城开封应试，遇见伯乐欧阳修，就在他名动京师之时，母亲去世，苏轼携本家一大一小二苏回川奔丧，守丧期满后至凤翔府做官。（如果前往网页，上面的地图可放大缩小，这些旅程可以看得很清）</p><p>因和主持变法的王安石政见不和，自请出任杭州通判，江南风月好哇，于是就有了欲把西湖比西子，有了苏堤春晓、三潭映月，还有那令人垂涎三尺的东坡肉。（按史实考，实际上修浚西湖是他再任杭州时的政绩）</p><p>苏轼说，”古之成大事者，不唯有超世之才，亦必有坚韧不拔之志“，诚不我欺，乌台诗案给予了苏轼沉重打击，被迫下放黄州团练副使，楚水本是凄凉地，触景伤情，可是苏东坡是谁哇，在赤壁古战场，他惊叹，”此非曹孟德之诗乎？西望夏口，东望武昌，山川相缪，郁乎苍苍“；”酾酒临江，横槊赋诗，固一世之雄也，而今安在哉？“，他豁然；”寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风“，他哀伤。当然，他也自嘲，“但少闲人如吾两人耳。”</p><p>毛色日益衰，志气日益微呐，五十九岁的大才子还要被连贬至惠州，岭南何许地也，屈原笔下的莽荒之地，可是此心安处即是他苏东坡的乡，“日啖荔枝三百颗，不辞长作岭南人。”大快朵颐，岂不美哉？值得一提是，苏轼同样给惠州人民带了一个西湖，同为 5A 景区，世人只知杭州西湖，却不知惠州西湖。</p><p>心似浮萍，台海波摇呐，花甲老人被再贬至更偏僻的儋州，孤岛夜月，何其凄怆？可他是筚路蓝缕人。</p><blockquote><p>摘自百度百科：苏轼把儋州当成了自己的第二故乡，“我本儋耳氏，寄生西蜀州”。他在这里办学堂，介学风，以致许多人不远千里，追至儋州，从苏轼学。在宋代一百多年里，海南从没有人进士及第。但苏轼北归不久，这里的姜唐佐就举乡贡。为此苏轼题诗：“沧海何曾断地脉，珠崖从此破天荒。”人们一直把苏轼看作是儋州文化的开拓者、播种人，对他怀有深深的崇敬。</p></blockquote><p>宋徽宗大赦天下，苏轼北归，途经廉州、永州，于 公元1101 年病逝于常州，上述地图中北归旅程清晰可见。</p><p>好的，走远了，这其实是一篇野生的技术文。本文只是以苏轼为例，可以在页面上输入任何历史名人，欢迎大家访问工具页面，复制下述地址到浏览器打开或者点击<a href="https://tools.buyixiao.xyz/historical-figure-query">阅读原文</a>（如果访问不了那就是服务器过载了，稍等就好）</p><p><a href="https://tools.buyixiao.xyz/historical-figure-query">https://tools.buyixiao.xyz/historical-figure-query</a></p>]]></content>
+    
+    
+    <summary type="html">笔者基于 CBDB 数据库开发了一个可视化历史人物的社会关系、亲属关系和人生足迹的网页，「人海浮沉几万里，此心安处是吾乡」，以苏轼为例。</summary>
+    
+    
+    
+    <category term="可视化" scheme="https://buyixiao.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    
+    <category term="可视化" scheme="https://buyixiao.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    <category term="CBDB" scheme="https://buyixiao.github.io/tags/CBDB/"/>
+    
+    <category term="历史人物" scheme="https://buyixiao.github.io/tags/%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9/"/>
+    
+    <category term="关系网络" scheme="https://buyixiao.github.io/tags/%E5%85%B3%E7%B3%BB%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="生平足迹" scheme="https://buyixiao.github.io/tags/%E7%94%9F%E5%B9%B3%E8%B6%B3%E8%BF%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>pandas 拆分具有相同结构的 csv</title>
@@ -100,9 +129,9 @@
     <category term="Linux" scheme="https://buyixiao.github.io/categories/Linux/"/>
     
     
-    <category term="crontab" scheme="https://buyixiao.github.io/tags/crontab/"/>
-    
     <category term="python" scheme="https://buyixiao.github.io/tags/python/"/>
+    
+    <category term="crontab" scheme="https://buyixiao.github.io/tags/crontab/"/>
     
   </entry>
   
@@ -123,11 +152,11 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
     <category term="filter" scheme="https://buyixiao.github.io/tags/filter/"/>
     
     <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
-    
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
   </entry>
   
@@ -198,9 +227,9 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
-    
     <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
+    <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
     
     <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
     
@@ -290,9 +319,9 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
-    
     <category term="分层抽样" scheme="https://buyixiao.github.io/tags/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/"/>
+    
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
   </entry>
   
@@ -468,27 +497,6 @@
     
     
     <category term="罗素" scheme="https://buyixiao.github.io/tags/%E7%BD%97%E7%B4%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>李开复：追随我心</title>
-    <link href="https://buyixiao.github.io/blog/follow-your-heart-by-likaifu.html"/>
-    <id>https://buyixiao.github.io/blog/follow-your-heart-by-likaifu.html</id>
-    <published>2022-01-21T06:48:38.000Z</published>
-    <updated>2022-01-21T06:53:05.304Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>全文摘自李开复相关传记，《追随我心》，作者不详。</p></blockquote><p>并不很久的以前，也就在 1979 年到 1980 年间，在哥伦比亚大学，两个政治科学系大一的新生，在课堂上总是没精打采。其中一个是来自台湾的华裔，喜欢窝在教室左后方的一隅，听得无趣，索性呼呼大睡。这个男孩叫李开复，此君并非厌学，而是对政治科学越来越不感兴趣。蹉跎到大二下学期，他终于决定快刀斩乱麻——转系，改学自己感兴趣的计算机。</p><p>兴趣是什么？兴趣就意味着天赋。李开复在计算机系如鱼得水，左右逢源，两年后毕业，成绩居全系之首。这样的学生用不着按部就班。在教授的推荐下，李开复进入在计算机领域独领风骚的卡内基•梅隆大学，直接攻读博士。计算机学院的院长找他谈话，劈头就问：“读博士的目的是什么？”李开复大声答：“我从大学带走的将是一篇改变世界的、顶尖的博士论文。”院长予以纠正，说：“你从这儿带走的最有价值的东西，不是一篇论文，而是你分析、思考的能力，研究、发现真理的经验，以及科学家的胸怀。这样，当你有一天改变研究方向，依然可以在任何一个新的领域出类拔萃。”李开复选定语音识别为攻读方向，经过一年“热恋”，他发现专家系统其冷如冰，远不如统计学有情有义。李开复决心“移情别恋”。他担心导师发怒，谁知得到的回答竟是：“开复，你对专家系统和统计的观点，我是不赞同的，但我可以支持你用统计的方法去做，因为我相信科学没有绝对的对错，我们都是平等的。而且，我更相信一个富有激情的人可以找到更好的解决方案。”李开复从导师的大度悟到科学的真谛，他全力以赴，放手一搏。３年过去了，李开复的研究成果及博士论文，引发了那年语音世界最大的冲击波。26 岁的李开复功成名就，成为卡内基•梅隆大学最年轻的副教授。天之骄子，有尊严，有地位，有课题，有经费，出任大公司顾问，飞赴各地讲学，包括去他的祖籍之邦、魂之所系的祖国大陆。</p><p>“让世界因你而不同！”这是李开复埋在心底多年的梦想。1990 年，苹果公司的一个邀请电话让李开复开始审视自己：“开复，你是想一辈子写一堆像废纸一样的学术论文，还是想真正地改变世界？”面对苹果公司的召唤，李开复旋即做出回应，走出象牙塔，加盟“改变世界”的大军。在苹果公司，李开复感受到了从纸上谈兵转入实战的无穷乐趣。1995 年，33 岁的李开复出任苹果公司的副总裁。</p><p>但是他仍然不满足，依然要跳槽，因为硅谷的另一家公司 SGI 发出了更有诱惑力的邀请——“你想做什么，然后我们根据你的兴趣对公司进行改组。”不是他们缺什么人才，让你去填补，而是诚恳地询问你需要什么平台，以便为你量身搭建。这样的机遇，李开复岂能错过！双方一拍即合，　1996 年７月，李开复跳槽去了 SGI 。李开复奉行“自己设计自己”的人生信条，怎奈 SGI 是一家硬件公司，开复的长处却在软件开发，这就等于在篮球场上跑马，任是赤兔、骅骝，也撒不开四蹄。日复一日，李开复萌生去意。对于下一个选择，他立下两条标准：一是做软件，二是去中国。</p><p>机会来了。其实机会无处不在，就看你有没有做好准备。彼时，比尔•盖茨创立的微软王国要把触角伸向中国，李开复成为它的不二人选。时间：1998 年金秋；职务：微软中国研究院院长。李开复在中国市场的开拓，值得写部书来描述，那是一种完全不同的创新理念、绝对领先的科学技术在神州大地生根发芽。微软只是起用了一个人，就开拓了中国市场；李开复只是“追随我心”，就一跃成为微软王国的副总裁。在你我想来，这该是李开复的最后一站。在微软占据高位，与比尔•盖茨亲密共事，坐拥财富和风光，“花迎喜气皆知笑，鸟识欢心亦解歌”。人生至此，夫复何求？李开复不这么想，他后来回忆：“我如同一部庞大机器上的零件，在中规中矩、没有任何发挥空间的环境下运行着。这是一个随时随地都可以被替换的光鲜零件。那种价值的缺失感以及精神上的落寞占据了我的内心。”微软既然已无成长空间，那就走吧！到哪儿去？他相中了 Google。但他清醒地意识到，管理更多的人马，不是自己的所爱，他渴望从无到有的创新，而不是经营一个巨无霸。于是，在2009 年９月，李开复又一次选择潇洒地离去。向总部递交辞呈之际，Google 高管艾伦•尤斯塔斯试图用更优厚的条件予以挽留。李开复真诚地说：“我的人生还有一个缺憾没有实现，现在得去弥补。我可能创办一家‘创新工场’，和中国青年一起创造新的技术奇迹。”</p><p>如今，李开复正在按照他本人的意愿，在神州大地进行“创新工场”试验。他会成功吗？我想这是毫无疑问的，也是次要又次要的，那么，最主要的一点是什么呢？诚如他自己所言：“人生在世时间非常短，如果你总是不敢做想做的事情，那么一生过去了，你留下来的只有悔恨，只有懊恼。”“我步入丛林，因为我希望生活得有意义，我希望活得深刻，并汲取生命中所有的精华，然后从中学习，以免让我在生命终结时，才发现自己从来没有活过。”</p>]]></content>
-    
-    
-    <summary type="html">我步入丛林,因为我希望生活得有意义,我希望活得深刻,并汲取生命中所有的精华,然后从中学习,以免让我在生命终结时,才发现自己从来没有活过。</summary>
-    
-    
-    
-    <category term="励志" scheme="https://buyixiao.github.io/categories/%E5%8A%B1%E5%BF%97/"/>
-    
-    
-    <category term="李开复" scheme="https://buyixiao.github.io/tags/%E6%9D%8E%E5%BC%80%E5%A4%8D/"/>
     
   </entry>
   

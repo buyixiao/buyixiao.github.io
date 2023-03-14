@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>CBDB 历史人物关系和足迹可视化 | BuyiXiao's Blog</title><meta name="keywords" content="CBDB,可视化,历史人物,关系网络,生平足迹"><meta name="author" content="BuyiXiao,2391527690@qq.com"><meta name="copyright" content="BuyiXiao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="笔者基于 CBDB 数据库开发了一个可视化历史人物的社会关系、亲属关系和人生足迹的网页，「人海浮沉几万里，此心安处是吾乡」，以苏轼为例。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CBDB 历史人物关系和足迹可视化">
+<meta property="og:url" content="https://buyixiao.github.io/blog/historical-figure-visual.html">
+<meta property="og:site_name" content="BuyiXiao&#39;s Blog">
+<meta property="og:description" content="笔者基于 CBDB 数据库开发了一个可视化历史人物的社会关系、亲属关系和人生足迹的网页，「人海浮沉几万里，此心安处是吾乡」，以苏轼为例。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png">
+<meta property="article:published_time" content="2023-03-14T06:52:25.000Z">
+<meta property="article:modified_time" content="2023-03-14T07:09:37.438Z">
+<meta property="article:author" content="BuyiXiao">
+<meta property="article:tag" content="可视化">
+<meta property="article:tag" content="CBDB">
+<meta property="article:tag" content="历史人物">
+<meta property="article:tag" content="关系网络">
+<meta property="article:tag" content="生平足迹">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://buyixiao.github.io/blog/historical-figure-visual"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-6877569709040311',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a7f38b8c2f5041060a57dad7c8b8392c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-217305706-1"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-217305706-1');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"本文发表于","messageNext":"天前，其中的内容可能过期。"},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: BuyiXiao","link":"链接: ","source":"来源: BuyiXiao's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CBDB 历史人物关系和足迹可视化',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-14 15:09:37'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="BuyiXiao's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">64</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">BuyiXiao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">CBDB 历史人物关系和足迹可视化</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-14T06:52:25.000Z" title="发表于 2023-03-14 14:52:25">2023-03-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-14T07:09:37.438Z" title="更新于 2023-03-14 15:09:37">2023-03-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/">可视化</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CBDB 历史人物关系和足迹可视化"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/blog/historical-figure-visual.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/blog/historical-figure-visual.html" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>中国历代人物传记资料库（CBDB）是在社会学科领域有着鼎鼎大名，它系统性地收入了中国历史上所有重要的传记资料，其项目主页地址如下：</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://projects.iq.harvard.edu/chinesecbdb">https://projects.iq.harvard.edu/chinesecbdb</a></p>
+<p>我最开始接触到这个数据库还是我大二时候，然后那时我一无所能，面对这么庞大的数据库无从下手。等到后面学了数据库基本原理和技术，以及一点数据分析可视化技巧后，才陆陆续续有了一些可以实现的 idea，于是上周日完成了一些可能相对古早的 idea，一并部署上线，页面地址为：</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://tools.buyixiao.xyz/historical-figure-query">https://tools.buyixiao.xyz/historical-figure-query</a></p>
+<p>页面长这样，非常简洁。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/03/14/9wuKHqrjS3ngibY.png"></p>
+<p>页面功能概括如下：只需要输入一个历史人物名（CBDB 共收录 52w 余人），就能生成该人物的社会关系图、亲属关系图以及此人在华夏大地留下的足迹图。</p>
+<p>人海浮沉几万里，此心安处是吾乡，苏东坡的一生，几乎都是在漂泊中度过的。下文将用今天分享的工具，从一个小角度看见大才子。</p>
+<p>在页面上输入苏轼并回车，可得：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/03/14/7wod2tv3h5xIe9z.png"></p>
+<p>​        苏轼，男，宋朝人，生于公元 1036 年，卒于公元 1101 年，享年 66 岁。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/03/14/bjIDNFRzM58rum7.png"></p>
+<p>苏轼的社会关系（包括敌人、朋友等等）非常复杂，大部分是诗文雅趣之事，也有惨遭小人攻讦之难。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/03/14/eN7PkOy3MgxpujE.png"></p>
+<p>相比较之下，苏轼的亲属关系就显得简单许多，这大概和传记对其家人（可能苏洵、苏辙除外）记载并不多。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png"></p>
+<p>苏轼是四川眉山人，出生于 1036 年，在 1056 年以前，也就是他人生的前二十年，几乎都是在巴山夜雨中度过的，然后前往北宋都城开封应试，遇见伯乐欧阳修，就在他名动京师之时，母亲去世，苏轼携本家一大一小二苏回川奔丧，守丧期满后至凤翔府做官。（如果前往网页，上面的地图可放大缩小，这些旅程可以看得很清）</p>
+<p>因和主持变法的王安石政见不和，自请出任杭州通判，江南风月好哇，于是就有了欲把西湖比西子，有了苏堤春晓、三潭映月，还有那令人垂涎三尺的东坡肉。（按史实考，实际上修浚西湖是他再任杭州时的政绩）</p>
+<p>苏轼说，”古之成大事者，不唯有超世之才，亦必有坚韧不拔之志“，诚不我欺，乌台诗案给予了苏轼沉重打击，被迫下放黄州团练副使，楚水本是凄凉地，触景伤情，可是苏东坡是谁哇，在赤壁古战场，他惊叹，”此非曹孟德之诗乎？西望夏口，东望武昌，山川相缪，郁乎苍苍“；”酾酒临江，横槊赋诗，固一世之雄也，而今安在哉？“，他豁然；”寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风“，他哀伤。当然，他也自嘲，“但少闲人如吾两人耳。”</p>
+<p>毛色日益衰，志气日益微呐，五十九岁的大才子还要被连贬至惠州，岭南何许地也，屈原笔下的莽荒之地，可是此心安处即是他苏东坡的乡，“日啖荔枝三百颗，不辞长作岭南人。”大快朵颐，岂不美哉？值得一提是，苏轼同样给惠州人民带了一个西湖，同为 5A 景区，世人只知杭州西湖，却不知惠州西湖。</p>
+<p>心似浮萍，台海波摇呐，花甲老人被再贬至更偏僻的儋州，孤岛夜月，何其凄怆？可他是筚路蓝缕人。</p>
+<blockquote>
+<p>摘自百度百科：苏轼把儋州当成了自己的第二故乡，“我本儋耳氏，寄生西蜀州”。他在这里办学堂，介学风，以致许多人不远千里，追至儋州，从苏轼学。在宋代一百多年里，海南从没有人进士及第。但苏轼北归不久，这里的姜唐佐就举乡贡。为此苏轼题诗：“沧海何曾断地脉，珠崖从此破天荒。”人们一直把苏轼看作是儋州文化的开拓者、播种人，对他怀有深深的崇敬。</p>
+</blockquote>
+<p>宋徽宗大赦天下，苏轼北归，途经廉州、永州，于 公元1101 年病逝于常州，上述地图中北归旅程清晰可见。</p>
+<p>好的，走远了，这其实是一篇野生的技术文。本文只是以苏轼为例，可以在页面上输入任何历史名人，欢迎大家访问工具页面，复制下述地址到浏览器打开或者点击<a target="_blank" rel="noopener external nofollow noreferrer" href="https://tools.buyixiao.xyz/historical-figure-query">阅读原文</a>（如果访问不了那就是服务器过载了，稍等就好）</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://tools.buyixiao.xyz/historical-figure-query">https://tools.buyixiao.xyz/historical-figure-query</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:2391527690@qq.com" rel="external nofollow noreferrer">BuyiXiao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://buyixiao.github.io/blog/historical-figure-visual.html">https://buyixiao.github.io/blog/historical-figure-visual.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://buyixiao.github.io" target="_blank">BuyiXiao's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">可视化</a><a class="post-meta__tags" href="/tags/CBDB/">CBDB</a><a class="post-meta__tags" href="/tags/%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9/">历史人物</a><a class="post-meta__tags" href="/tags/%E5%85%B3%E7%B3%BB%E7%BD%91%E7%BB%9C/">关系网络</a><a class="post-meta__tags" href="/tags/%E7%94%9F%E5%B9%B3%E8%B6%B3%E8%BF%B9/">生平足迹</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png" data-sites="weibo,facebook,twitter,douban,wechat,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat-min.png" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/wechat-min.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay-min.png" target="_blank"><img class="post-qr-code-img" src= "/img/loading.gif" data-lazy-src="/img/alipay-min.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/blog/split-csv-with-same-columns.html"><img class="next-cover" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2022/04/02/8j3TYrUtmowDQV6.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">pandas 拆分具有相同结构的 csv</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/blog/weibo-superstar-relation-network-visual.html" title="微博明星关系网络可视化"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2022/01/20/ub479Pa6e3fxCiz.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-20</div><div class="title">微博明星关系网络可视化</div></div></a></div><div><a href="/blog/one-stop-weibo-visualization.html" title="一站式微博可视化平台"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2022/02/28/sDP7ZuaX8rCiKLY.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-28</div><div class="title">一站式微博可视化平台</div></div></a></div><div><a href="/blog/weibo-forward-network-visual.html" title="微博转发网络可视化构建"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2022/01/20/7EXmc2gsqljDikK.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-20</div><div class="title">微博转发网络可视化构建</div></div></a></div><div><a href="/blog/weibo-comment-robot-analysis.html" title="浅谈微博评论水军和异常流量"><img class="cover" src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2022/01/20/FSYtzTQbeD2O5NV.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-20</div><div class="title">浅谈微博评论水军和异常流量</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "/img/loading.gif" data-lazy-src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BuyiXiao</div><div class="author-info__description">星光殷殷，其灿如言</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">64</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/inspurer"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/inspurer" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2391527690@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fa  fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">专注数据爬虫及分析可视化，深度学习和各种应用开发；<a target="_blank" rel="noopener external nofollow noreferrer" href="https://afdian.net/@buyixiao">前往我的爱发电主页支持创作~</a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/historical-figure-visual.html" title="CBDB 历史人物关系和足迹可视化"><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/03/14/guAbIxZ5SVw6cz9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CBDB 历史人物关系和足迹可视化"/></a><div class="content"><a class="title" href="/blog/historical-figure-visual.html" title="CBDB 历史人物关系和足迹可视化">CBDB 历史人物关系和足迹可视化</a><time datetime="2023-03-14T06:52:25.000Z" title="发表于 2023-03-14 14:52:25">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/split-csv-with-same-columns.html" title="pandas 拆分具有相同结构的 csv"><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2022/04/02/8j3TYrUtmowDQV6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="pandas 拆分具有相同结构的 csv"/></a><div class="content"><a class="title" href="/blog/split-csv-with-same-columns.html" title="pandas 拆分具有相同结构的 csv">pandas 拆分具有相同结构的 csv</a><time datetime="2023-03-08T14:47:08.000Z" title="发表于 2023-03-08 22:47:08">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/dynamic-programming-notes.html" title="【动态规划】刷题记录"><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/02/28/wG4J3qCeKyBdFMI.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【动态规划】刷题记录"/></a><div class="content"><a class="title" href="/blog/dynamic-programming-notes.html" title="【动态规划】刷题记录">【动态规划】刷题记录</a><time datetime="2023-02-28T12:51:37.000Z" title="发表于 2023-02-28 20:51:37">2023-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/youth-by-samuel-ullman.html" title="塞缪尔·厄尔曼：青春"><img src= "/img/loading.gif" data-lazy-src="/img/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="塞缪尔·厄尔曼：青春"/></a><div class="content"><a class="title" href="/blog/youth-by-samuel-ullman.html" title="塞缪尔·厄尔曼：青春">塞缪尔·厄尔曼：青春</a><time datetime="2023-02-04T08:56:14.000Z" title="发表于 2023-02-04 16:56:14">2023-02-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/crontab-python.html" title="crontab 定时执行 Python 脚本踩坑记录"><img src= "/img/loading.gif" data-lazy-src="https://s2.loli.net/2023/02/04/4fX8uZPzoksSwBe.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="crontab 定时执行 Python 脚本踩坑记录"/></a><div class="content"><a class="title" href="/blog/crontab-python.html" title="crontab 定时执行 Python 脚本踩坑记录">crontab 定时执行 Python 脚本踩坑记录</a><time datetime="2023-02-04T07:28:38.000Z" title="发表于 2023-02-04 15:28:38">2023-02-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By BuyiXiao</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'JYKY6OF2S6R7uQzjfAjrDhEm-gzGzoHsz',
+      appKey: 'N4w6Indjlx2Ylwx6MjNpoTw5',
+      avatar: 'robohash',
+      serverURLs: 'https://jyky6of2.lc-cn-n1-shared.com',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, {"placeholder":"发表评论，邮箱和昵称是必须的，方便快速收到回复邮件","requiredFields":["nick","mail"]}))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://buyixiao.github.io/blog/historical-figure-visual.html'
+    this.page.identifier = 'blog/historical-figure-visual.html'
+    this.page.title = 'CBDB 历史人物关系和足迹可视化'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://buyixiao.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !false) {
+  if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
