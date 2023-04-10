@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2023-03-14T07:09:37.438Z</updated>
+  <updated>2023-04-10T09:22:54.419Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pandas 缺失值</title>
+    <link href="https://buyixiao.github.io/blog/pandas-na-tricks.html"/>
+    <id>https://buyixiao.github.io/blog/pandas-na-tricks.html</id>
+    <published>2023-04-10T08:51:42.000Z</published>
+    <updated>2023-04-10T09:22:54.419Z</updated>
+    
+    <content type="html"><![CDATA[<p> dataframe 中的缺失值非常常见，很有必要掌握精准识别和处理确实值的技巧。</p><h3 id="识别缺失值"><a href="#识别缺失值" class="headerlink" title="识别缺失值"></a>识别缺失值</h3><p>pandas 会将诸如 <code>NaN</code>、<code>null</code>、<code>None</code>、<code>NA</code> 等值视为缺失值，但是在实践中，类似 <code>init</code> 、<code>暂无</code>、<code>缺失</code> 等这样的值，我们也视为缺失值，怎么把这个认知喂给 pandas 呢，有两个办法。</p><p>第一种方法是在读取文件时，比如 <code>read_csv()</code>，有一个参数 <code>na_values</code>，它接受一个 list 列表，里面的每一个值就是我们要新增的缺失值。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;demo.csv&#x27;</span>,na_values=[<span class="string">&#x27;init&#x27;</span>,<span class="string">&#x27;暂无&#x27;</span>])</span><br></pre></td></tr></table></figure><p>第二个方法是读取文件后，使用 replace，如果有很多个，不可避免要使用 for 循环</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.replace(<span class="string">&#x27;init&#x27;</span>, np.nan, inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure><h3 id="处理缺失值"><a href="#处理缺失值" class="headerlink" title="处理缺失值"></a>处理缺失值</h3><p>两种思路，一种是去除缺失值、另外一种是填充缺失值。</p><h4 id="去除缺失值"><a href="#去除缺失值" class="headerlink" title="去除缺失值"></a>去除缺失值</h4><p>dataframe 内置了这个方法 <code>dropna()</code> ，第一个参数 axis 是老生常谈的了，会经常遇到，简单来说 axis =0 （默认值）就是一行一行的处理，axis=1 就是一列一列的处理；第二个参数 inplace 更加常见，取值 False（默认值） 时返回修改后的 dataframe，取值 True 意即原地修改，也就没有返回值。最后一个参数 how 取值为 <code>all</code>、<code>any</code> 之一，前一个意思为如果这一行所有的 item 都是缺失值才去除，后者条件更加宽松：只有某一行有一个 item 是缺失值就去除。</p><h4 id="填充缺失值"><a href="#填充缺失值" class="headerlink" title="填充缺失值"></a>填充缺失值</h4><p>常见的填充方式也有两种，第一种是使用同列的平均值、或者中位数填充。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># price 列的缺失值用均值代替</span></span><br><span class="line">df.fillna(&#123;<span class="string">&#x27;price&#x27;</span>: df[<span class="string">&#x27;price&#x27;</span>].mean()&#125;)</span><br></pre></td></tr></table></figure><p>另外一种是在该列使用插值，此种方式更为优雅。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;price&#x27;</span>] = df[<span class="string">&#x27;price&#x27;</span>].interpolate(method=<span class="string">&#x27;linear&#x27;</span>)</span><br></pre></td></tr></table></figure><p>method 可以取值为：</p><ul><li><code>slinear</code>、<code>linear</code>：线性插值</li><li><code>nearest</code>：最邻近插值法</li><li>更多取值的可以参考官方文档</li></ul>]]></content>
+    
+    
+    <summary type="html">精准识别和恰当处理 dataframe 中的缺失值</summary>
+    
+    
+    
+    <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
+    
+    
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
+    <category term="NA" scheme="https://buyixiao.github.io/tags/NA/"/>
+    
+    <category term="interpolate" scheme="https://buyixiao.github.io/tags/interpolate/"/>
+    
+  </entry>
   
   <entry>
     <title>CBDB 历史人物关系和足迹可视化</title>
@@ -476,27 +501,6 @@
     <category term="sina" scheme="https://buyixiao.github.io/tags/sina/"/>
     
     <category term="tencent" scheme="https://buyixiao.github.io/tags/tencent/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>罗素：我为什么而活</title>
-    <link href="https://buyixiao.github.io/blog/what-i-have-lived-for-by-russell.html"/>
-    <id>https://buyixiao.github.io/blog/what-i-have-lived-for-by-russell.html</id>
-    <published>2022-01-22T13:45:53.000Z</published>
-    <updated>2022-01-22T00:35:05.096Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>全文摘自《我为什么而活着》，《我为什么而活着》是《罗素自传》的序言，作者是伯特兰·罗素。</p></blockquote><h2 id="中文译文"><a href="#中文译文" class="headerlink" title="中文译文"></a>中文译文</h2><p>对爱情的渴望，对知识的追求，对人类苦难不可遏制的同情心，这三种纯洁而无比强烈的激情支配着我的一生。这三种激情，就像飓风一样，在深深的苦海上，肆意地把我吹来吹去，吹到濒临绝望的边缘。</p><p>我寻求爱情，首先因为爱情给我带来狂喜，它如此强烈以致我经常愿意为了几小时的欢愉而牺牲生命中的其他一切。我寻求爱情，其次是因为爱情可以解除孤寂一—那是一颗震颤的心，在世界的边缘，俯瞰那冰冷死寂、深不可测的深渊。我寻求爱情，最后是因为在爱情的结合中，我看到圣徒和诗人们所想像的天堂景象的神秘缩影。这就是我所寻求的，虽然它对人生似乎过于美好，然而最终我还是得到了它。</p><p>我以同样的热情寻求知识，我渴望了解人的心灵。我渴望知道星星为什么闪闪发光，我试图理解毕达哥拉斯的思想威力，即数字支配着万物流转。这方面我获得一些成就，然而并不多。</p><p>爱情和知识，尽其可能地把我引上天堂，但是同情心总把我带回尘世。痛苦的呼唤经常在我心中回荡，饥饿的儿童，被压迫被折磨者，被儿女视为负担的无助的老人以及充满孤寂、贫穷和痛苦的整个世界，都是对人类应有生活的嘲讽。我渴望减轻这些不幸，但是我无能为力，而且我自己也深受其害。</p><p>这就是我的一生，我觉得值得为它活着。如果有机会的话，我还乐意再活一次。</p><h2 id="英文原文"><a href="#英文原文" class="headerlink" title="英文原文"></a>英文原文</h2><p>《What I Have Lived For》 by Bertrand Russell</p><p>Three passions, simple but overwhelmingly strong, have governed my life: the longing for love, the search for knowledge, and unbearable pity for the suffering of mankind. These passions, like great winds, have blown me hither and thither, in a wayward course, over a great ocean of anguish, reaching to the very verge of despair.</p><p>I have sought love, first, because it brings ecstasy - ecstasy so great that I would often have sacrificed all the rest of life for a few hours of this joy. I have sought it, next, because it relieves loneliness–that terrible loneliness in which one shivering consciousness looks over the rim of the world into the cold unfathomable lifeless abyss. I have sought it finally, because in the union of love I have seen, in a mystic miniature, the prefiguring vision of the heaven that saints and poets have imagined. This is what I sought, and though it might seem too good for human life, this is what–at last–I have found.</p><p>With equal passion I have sought knowledge. I have wished to understand the hearts of men. I have wished to know why the stars shine. And I have tried to apprehend the Pythagorean power by which number holds sway above the flux. A little of this, but not much, I have achieved.</p><p>Love and knowledge, so far as they were possible, led upward toward the heavens. But always pity brought me back to earth. Echoes of cries of pain reverberate in my heart. Children in famine, victims tortured by oppressors, helpless old people a burden to their sons, and the whole world of loneliness, poverty, and pain make a mockery of what human life should be. I long to alleviate this evil, but I cannot, and I too suffer.</p><p>This has been my life. I have found it worth living, and would gladly live it again if the chance were offered me.</p>]]></content>
-    
-    
-    <summary type="html">对爱情的渴望，对知识的追求，对人类苦难不可遏制的同情心，这三种纯洁而无比强烈的激情支配着我的一生。</summary>
-    
-    
-    
-    <category term="励志" scheme="https://buyixiao.github.io/categories/%E5%8A%B1%E5%BF%97/"/>
-    
-    
-    <category term="罗素" scheme="https://buyixiao.github.io/tags/%E7%BD%97%E7%B4%A0/"/>
     
   </entry>
   
