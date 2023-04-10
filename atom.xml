@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2023-04-10T09:22:54.419Z</updated>
+  <updated>2023-04-10T09:25:58.148Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>pandas 缺失值</title>
+    <title>pandas 缺失值的识别和处理</title>
     <link href="https://buyixiao.github.io/blog/pandas-na-tricks.html"/>
     <id>https://buyixiao.github.io/blog/pandas-na-tricks.html</id>
     <published>2023-04-10T08:51:42.000Z</published>
-    <updated>2023-04-10T09:22:54.419Z</updated>
+    <updated>2023-04-10T09:25:58.148Z</updated>
     
     <content type="html"><![CDATA[<p> dataframe 中的缺失值非常常见，很有必要掌握精准识别和处理确实值的技巧。</p><h3 id="识别缺失值"><a href="#识别缺失值" class="headerlink" title="识别缺失值"></a>识别缺失值</h3><p>pandas 会将诸如 <code>NaN</code>、<code>null</code>、<code>None</code>、<code>NA</code> 等值视为缺失值，但是在实践中，类似 <code>init</code> 、<code>暂无</code>、<code>缺失</code> 等这样的值，我们也视为缺失值，怎么把这个认知喂给 pandas 呢，有两个办法。</p><p>第一种方法是在读取文件时，比如 <code>read_csv()</code>，有一个参数 <code>na_values</code>，它接受一个 list 列表，里面的每一个值就是我们要新增的缺失值。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;demo.csv&#x27;</span>,na_values=[<span class="string">&#x27;init&#x27;</span>,<span class="string">&#x27;暂无&#x27;</span>])</span><br></pre></td></tr></table></figure><p>第二个方法是读取文件后，使用 replace，如果有很多个，不可避免要使用 for 循环</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.replace(<span class="string">&#x27;init&#x27;</span>, np.nan, inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure><h3 id="处理缺失值"><a href="#处理缺失值" class="headerlink" title="处理缺失值"></a>处理缺失值</h3><p>两种思路，一种是去除缺失值、另外一种是填充缺失值。</p><h4 id="去除缺失值"><a href="#去除缺失值" class="headerlink" title="去除缺失值"></a>去除缺失值</h4><p>dataframe 内置了这个方法 <code>dropna()</code> ，第一个参数 axis 是老生常谈的了，会经常遇到，简单来说 axis =0 （默认值）就是一行一行的处理，axis=1 就是一列一列的处理；第二个参数 inplace 更加常见，取值 False（默认值） 时返回修改后的 dataframe，取值 True 意即原地修改，也就没有返回值。最后一个参数 how 取值为 <code>all</code>、<code>any</code> 之一，前一个意思为如果这一行所有的 item 都是缺失值才去除，后者条件更加宽松：只有某一行有一个 item 是缺失值就去除。</p><h4 id="填充缺失值"><a href="#填充缺失值" class="headerlink" title="填充缺失值"></a>填充缺失值</h4><p>常见的填充方式也有两种，第一种是使用同列的平均值、或者中位数填充。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># price 列的缺失值用均值代替</span></span><br><span class="line">df.fillna(&#123;<span class="string">&#x27;price&#x27;</span>: df[<span class="string">&#x27;price&#x27;</span>].mean()&#125;)</span><br></pre></td></tr></table></figure><p>另外一种是在该列使用插值，此种方式更为优雅。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;price&#x27;</span>] = df[<span class="string">&#x27;price&#x27;</span>].interpolate(method=<span class="string">&#x27;linear&#x27;</span>)</span><br></pre></td></tr></table></figure><p>method 可以取值为：</p><ul><li><code>slinear</code>、<code>linear</code>：线性插值</li><li><code>nearest</code>：最邻近插值法</li><li>更多取值的可以参考官方文档</li></ul>]]></content>
     
     
-    <summary type="html">精准识别和恰当处理 dataframe 中的缺失值</summary>
+    <summary type="html">精准识别和恰当处理 dataframe 中的缺失值的 tricks 分享</summary>
     
     
     
@@ -177,11 +177,11 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
     <category term="filter" scheme="https://buyixiao.github.io/tags/filter/"/>
     
     <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
-    
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
   </entry>
   
@@ -252,9 +252,9 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
-    
     <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
+    
+    <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
     
     <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
     
@@ -344,9 +344,9 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
-    
     <category term="分层抽样" scheme="https://buyixiao.github.io/tags/%E5%88%86%E5%B1%82%E6%8A%BD%E6%A0%B7/"/>
+    
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
   </entry>
   
@@ -440,9 +440,9 @@
     
     <category term="python" scheme="https://buyixiao.github.io/tags/python/"/>
     
-    <category term="flask" scheme="https://buyixiao.github.io/tags/flask/"/>
-    
     <category term="nginx" scheme="https://buyixiao.github.io/tags/nginx/"/>
+    
+    <category term="flask" scheme="https://buyixiao.github.io/tags/flask/"/>
     
     <category term="ip" scheme="https://buyixiao.github.io/tags/ip/"/>
     
