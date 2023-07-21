@@ -80,6 +80,8 @@
       
         <tags>
             
+            <tag> pandas </tag>
+            
             <tag> json </tag>
             
             <tag> csv </tag>
@@ -277,11 +279,11 @@
       
         <tags>
             
-            <tag> pandas </tag>
+            <tag> filter </tag>
             
             <tag> groupby </tag>
             
-            <tag> filter </tag>
+            <tag> pandas </tag>
             
         </tags>
       
@@ -364,9 +366,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> groupby </tag>
+            
+            <tag> pandas </tag>
             
             <tag> frequency </tag>
             
@@ -472,9 +474,9 @@
       
         <tags>
             
-            <tag> 分层抽样 </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> 分层抽样 </tag>
             
         </tags>
       
@@ -584,9 +586,9 @@
             
             <tag> python </tag>
             
-            <tag> nginx </tag>
-            
             <tag> flask </tag>
+            
+            <tag> nginx </tag>
             
             <tag> ip </tag>
             
