@@ -277,11 +277,11 @@
       
         <tags>
             
-            <tag> filter </tag>
+            <tag> pandas </tag>
             
             <tag> groupby </tag>
             
-            <tag> pandas </tag>
+            <tag> filter </tag>
             
         </tags>
       
@@ -364,9 +364,9 @@
       
         <tags>
             
-            <tag> groupby </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> groupby </tag>
             
             <tag> frequency </tag>
             
@@ -472,9 +472,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> 分层抽样 </tag>
+            
+            <tag> pandas </tag>
             
         </tags>
       
@@ -584,9 +584,9 @@
             
             <tag> python </tag>
             
-            <tag> flask </tag>
-            
             <tag> nginx </tag>
+            
+            <tag> flask </tag>
             
             <tag> ip </tag>
             
