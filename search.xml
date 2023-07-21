@@ -8,7 +8,7 @@
       <link href="/blog/tfboys-fans-overlap-visual.html"/>
       <url>/blog/tfboys-fans-overlap-visual.html</url>
       
-        <content type="html"><![CDATA[<p>编写了 Python3 爬虫，分别采集了 TF-Boys 的三小只易烊千玺、王源、王俊凯各 11000+ 粉丝累计 33000+ 粉丝，然后进行了粉丝重叠度可视化，同时对粉丝的性别、属地、账号注册时间信息作了对比可视化。</p><p>三小只粉丝重叠度的韦恩图如下：</p><p><img src="https://s2.loli.net/2023/07/21/LcGTZAxjKO1uHmQ.png" alt="tfboys-fans-overlap.png"></p><p>三人共同粉丝在各自的总粉丝中占比五分之一（1999 除以 11000）左右，其中易烊千玺和王俊凯两人的粉丝重叠度达到了惊人的三分之一以上（4277 除以 11000）。</p><p>下面是粉丝性别构成占比、属地分布和账号注册时长对比的可视化，结论如下：</p><ol><li>三小只的男女粉比例大致为 1:2，其中王源的男女粉比例最大，即男粉比例最大，女粉比例最小。顺嘴提一句，从上面的韦恩图看出来王源和其他两人的粉丝重合度也是相对最少的。</li><li>三小只的粉丝属地分布中，东北和西北地区的粉丝明显比东南和西南少，其中山东、河南、广东位于前三甲，有人详细解释下为什么吗?</li><li>三小只中，易烊千玺 的粉丝中注册微博 2 年或者 5 年以上的占比明显比其他两人多，换句话说，易烊千玺粉丝中微博是新号的占比最少。</li></ol><p>可视化效果图如下，加载较慢，可以交互~</p><p><a href="./assets/html5/tfboys_fans_analysis.html">loding</a></p>]]></content>
+        <content type="html"><![CDATA[<p>编写了 Python3 爬虫，分别采集了 TF-Boys 的三小只易烊千玺、王源、王俊凯各 11000+ 粉丝累计 33000+ 粉丝，然后进行了粉丝重叠度可视化，同时对粉丝的性别、属地、账号注册时间信息作了对比可视化。</p><p>三小只粉丝重叠度的韦恩图如下：</p><p><img src="https://s2.loli.net/2023/07/21/LcGTZAxjKO1uHmQ.png" alt="tfboys-fans-overlap.png"></p><p>三人共同粉丝在各自的总粉丝中占比五分之一（1999 除以 11000）左右，其中易烊千玺和王俊凯两人的粉丝重叠度达到了惊人的三分之一以上（4277 除以 11000）。</p><p>下面是粉丝性别构成占比、属地分布和账号注册时长对比的可视化，结论如下：</p><ol><li>三小只的男女粉比例大致为 1:2，其中王源的男女粉比例最大，即男粉比例最大，女粉比例最小。顺嘴提一句，从上面的韦恩图看出来王源和其他两人的粉丝重合度也是相对最少的。</li><li>三小只的粉丝属地分布中，东北和西北地区的粉丝明显比东南和西南少，其中山东、河南、广东位于前三甲，有人详细解释下为什么吗?</li><li>三小只中，易烊千玺 的粉丝中注册微博 2 年或者 5 年以上的占比明显比其他两人多，换句话说，易烊千玺粉丝中微博是新号的占比最少。</li></ol><p>可视化效果图如下，加载可能较慢，可以交互~</p><p><a href="../assets/html5/tfboys_fans_analysis.html">loding</a></p>]]></content>
       
       
       <categories>
@@ -250,9 +250,9 @@
       
         <tags>
             
-            <tag> crontab </tag>
-            
             <tag> python </tag>
+            
+            <tag> crontab </tag>
             
         </tags>
       
@@ -277,11 +277,11 @@
       
         <tags>
             
-            <tag> pandas </tag>
+            <tag> filter </tag>
             
             <tag> groupby </tag>
             
-            <tag> filter </tag>
+            <tag> pandas </tag>
             
         </tags>
       
@@ -364,9 +364,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> groupby </tag>
+            
+            <tag> pandas </tag>
             
             <tag> frequency </tag>
             
@@ -472,9 +472,9 @@
       
         <tags>
             
-            <tag> 分层抽样 </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> 分层抽样 </tag>
             
         </tags>
       
