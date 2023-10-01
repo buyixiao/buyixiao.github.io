@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>李佳琦微博粉丝画像简析</title>
+      <link href="/blog/ljq-fans-portrait.html"/>
+      <url>/blog/ljq-fans-portrait.html</url>
+      
+        <content type="html"><![CDATA[<p>编写 Python3 爬虫采集了李佳琦微博的 10000+ 粉丝，对 profile 的多个维度进行了可视分析，视图构建简单的用户画像如下：</p><ol><li>粉丝性别比为男女 7:13 ，大概就是男 1 女 2 的比例，这和微博整体的用户画像一致，没有因为是美妆博主而女粉占比过多。</li><li>粉丝大部分（~97%）是普通用户，约 1% 是明星名人，2% 是其他认证用户。</li><li>阳光信用上信用中上比例 60%，信用中下的占比约 4  成。</li><li>粉丝 ip 属地省份分布上，集中分布在广东、江苏、浙江、山东、河南等经济或人口大省。</li><li>粉丝就读或毕业学校上，top 3 为清华大学、北京大学、山东大学，top 30 也是清一色的名校，这里面原因应该挺多的，欢迎在评论区畅所欲言。我觉得有一点是名校生更倾向于在自己的社交主页上公开自己的母校。</li><li>约六分之一的粉丝的微博是近一年注册的，有超过十分之一的粉丝注册微博超过了十年。</li><li>去除了 1965 年以前和 2015 年以后的噪声数据，粉丝出生年份整体呈现以 2000 年为均值的正态分布，尤其集中在 1995-2005 年。1970 年是一个小高峰的原因是 1970 年是计算机计时开始时间也是默认时间，至于 1990 年为什么是小高峰有待考量。</li><li>约六成的粉丝的粉丝数小于 10，有 6 个粉丝数超过 10w 的小大 V 关注了他，目测大部分的大 V 是没有采集到的。</li></ol><p>可视化效果图如下，加载可能较慢，可以交互~</p><iframe width="100%" height="3160" scrolling="auto" frameborder="0" src="../assets/html5/ljq_fans_analysis.html"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 可视化 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+            <tag> echarts </tag>
+            
+            <tag> 粉丝画像 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pandas 绘制非数值类型饼图</title>
       <link href="/blog/pandas-pie-plot.html"/>
       <url>/blog/pandas-pie-plot.html</url>
@@ -310,9 +341,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> crontab </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
