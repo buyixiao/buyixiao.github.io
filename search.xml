@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>微博 spammer 账号识别模型</title>
+      <link href="/blog/weibo-spammer-account-identify-model.html"/>
+      <url>/blog/weibo-spammer-account-identify-model.html</url>
+      
+        <content type="html"><![CDATA[<p>用过 twitter 的 <strong>botometer</strong> 的同学都知道，botometer 可以通过检测 twitter 帐户的活动评价该账号属于垃圾内容制造者的可能性。</p><blockquote><p>botometer 应该更倾向于社交机器人识别，而笔者在构建微博账号数据集的时候，更倾向于 spammer 识别，即虽然它是一个 bot 账号，但是内容和互动都正常，视为非 spammer 账号标记。</p></blockquote><p>但是据笔者所知（可能笔者孤陋寡闻），weibo 并没有对应的产品或服务。于是我从 2022.12 开始着手训练微博 spammer 账号识别模型：检测微博账号是 spammer 的可能性，一共经历了三个阶段，前面两个阶段如下：</p><ol><li>手动构建初始化数据集，只采用微博账号 profile 页面的粉丝数、关注数、微博数、认证类型、阳光信用等等特征，使用 DNN 神经网络，施以 PCA 降维和 L2 正则化，最终训练的准确率在 85% 左右。</li><li>继续扩充数据集，同时新增关系网络、微博文本采集并抽取相应特征，准确率来到 95%，但是多层关系网络的抓取等比较耗时，一个微博账号的特征信息采集抽取和识别耗时上百秒，无法做到实时识别；所以我舍弃了部分抓取耗时的字段，最终准确率固定在 90% 上下。</li></ol><p>一般来说，提升一个模型的 ACC、ROC、F1，通常具有以下方法</p><ol><li>扩充数据集。</li><li>降维。</li><li>正则化</li></ol><p>正则化我在初代模型就已经用上了，最开始模型甚至不收敛，使用正则化收敛后的最终模型准确率在 85% 左右。</p><p>降维对这个 spammer 模型来说可能只是加快了训练过程，实测准确率并没有显著提升。</p><p>而扩充数据集是一直在做的工作，目前可能还需要一个量变等到质变的时刻。</p><p>对于一个模型能提升准确率的方法都做了，所有我只能换另外一个模型方法来做提升了。</p><p>最终选定 AdaBoost，他是三种集成学习 <strong>Bagging</strong>、<strong>Boosting</strong>、<strong>Stacking</strong> 之一的 Boosting 方法下的一种名为 “Adaptive Boosting”方法（自适应增强）的缩写。</p><p>Boosting 的核心思想是 三个臭皮匠，赛过诸葛亮。一般来说，找到弱学习算法要相对容易一些，然后通过反复学习得到一系列弱分类器，组合这些弱分类器得到一个强分类器。</p><p>AdaBoost 算法的流程不算简单，感兴趣的可以搜索下。</p><p>最终我用 AdaBoost，在和上一篇推送一样，只抓取有限不耗时特征的前提下，准确率从 90% 左右直接稳定到了 95%+，识别一个给定 uid 的微博账号的 spammer 属性，耗时在 5s 以内。</p><p>最后把这个最新模型上线，视作  alpha 版本，上篇推送的模型为一般版本，长期测试 alpha 版本后，最后会覆盖一般版本。</p><p>模型网页测试地址为</p><blockquote><p><a href="https://weibo-crawl-visual.buyixiao.xyz/weibo-spammer-evaluator">https://weibo-crawl-visual.buyixiao.xyz/weibo-spammer-evaluator</a></p></blockquote><p>其中第一个 tab 是一般版本，最后一个 tab 为 alpha 版本。</p><p>同时新增了 API 接口调用，接口地址是：</p><blockquote><p><a href="https://api.buyixiao.xyz/weibo/spammer-account-evaluate">https://api.buyixiao.xyz/weibo/spammer-account-evaluate</a></p></blockquote><p>使用 Python 调用该接口的 demo 代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">test_token = <span class="string">&quot;在此处填入你申请的 token&quot;</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test_spammer_evaluate</span>(<span class="params">user_id</span>):</span></span><br><span class="line">    resp = requests.get(url=<span class="string">f&#x27;https://api.buyixiao.xyz/weibo/spammer-account-evaluate&#x27;</span>, params=&#123;</span><br><span class="line">        <span class="string">&#x27;user_id&#x27;</span>: user_id, <span class="comment"># 必选参数，检测的微博账号 id</span></span><br><span class="line">        <span class="string">&#x27;token&#x27;</span>: test_token, <span class="comment"># 必选参数，校验接口</span></span><br><span class="line">        <span class="string">&#x27;alpha&#x27;</span>: true <span class="comment"># 可选参数，是否采用最新的 alpha 内测模型</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(resp.url)</span><br><span class="line">    <span class="built_in">print</span>(resp.json())</span><br><span class="line">test_spammer_evaluate(user_id=<span class="string">&quot;2557129567&quot;</span>)</span><br></pre></td></tr></table></figure><p>网页可以输入单个微博账号的 uid 免费测试，而 token 的申请是按量付费的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> spammer </tag>
+            
+            <tag> 深度学习 </tag>
+            
+            <tag> adaboost </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>再读《湖心亭看雪》</title>
       <link href="/blog/watching-snow-with-middle-lake-pavilion.html"/>
       <url>/blog/watching-snow-with-middle-lake-pavilion.html</url>
@@ -422,11 +451,11 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> filter </tag>
             
             <tag> groupby </tag>
+            
+            <tag> pandas </tag>
             
         </tags>
       
@@ -509,9 +538,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> groupby </tag>
+            
+            <tag> pandas </tag>
             
             <tag> frequency </tag>
             
@@ -617,9 +646,9 @@
       
         <tags>
             
-            <tag> 分层抽样 </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> 分层抽样 </tag>
             
         </tags>
       
