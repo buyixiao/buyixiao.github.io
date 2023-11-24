@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>「疯狂小杨哥」微博粉丝画像简析</title>
+      <link href="/blog/brother-yang-fans-portrait.html"/>
+      <url>/blog/brother-yang-fans-portrait.html</url>
+      
+        <content type="html"><![CDATA[<p>接上篇，<a href="https://buyixiao.github.io/blog/ljq-fans-portrait.html">李佳琦微博粉丝画像简析</a> 继续使用 Python3 爬虫采集了「疯狂小杨哥」微博的 10000+ 粉丝，对 profile 的多个维度进行了可视分析，构建简单的用户画像对比李佳琦分析如下：</p><blockquote><p>以下分析只针对这 10000+ 粉丝，不能代表整体~</p></blockquote><ol><li>粉丝性别比为男女 7:5 ，大概就是男 3 女 2 的比例，男粉居然比女粉还多，这与微博整体或者李佳琦的用户画像都有些出入。</li><li>粉丝大部分（~98%）是普通用户，0.6% 是明星名人，1.5% 是其他认证用户，普通比例相比于李佳琦较多 1%，认证用户较少 1%。</li><li>阳光信用上信用中上（信用较好及以上）比例 23%，信用中下（信用一般及以下）的占比约 67%，信用较低的粉丝甚至超过了一半，相比于李佳琦粉丝有所反转。</li><li>粉丝 ip 属地省份分布上，集中分布在广东、江苏、浙江、山东、河南等经济或人口大省。</li><li>粉丝就读或毕业学校上，top 3 为清华大学、北京大学、四川大学，top 30 也是清一色的名校，这里面原因应该挺多的，欢迎在评论区畅所欲言。我觉得有一点是名校生更倾向于在自己的社交主页上公开自己的母校。</li><li>差不多一半的粉丝的微博是近一年注册的，不超过十分之一的粉丝注册微博超过了十年。</li><li>去除了 1965 年以前和 2015 年以后的噪声数据，粉丝出生年份整体呈现以 2003 年为均值的正态分布，尤其集中在 1998-2008 年；出生高峰年份整体比李佳琦粉丝晚了 3 年。</li><li>约八成的粉丝的粉丝数小于 10，有 8 个粉丝数超过 10w 的小大 V 关注了他，目测大部分的大 V 是没有采集到的。</li></ol><p>可视化效果图如下，加载可能较慢，可以交互~</p><iframe width="100%" height="3160" scrolling="auto" frameborder="0" src="../assets/html5/brother_yang_fans_analysis.html"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 可视化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 可视化 </tag>
+            
+            <tag> 数据分析 </tag>
+            
+            <tag> echarts </tag>
+            
+            <tag> 粉丝画像 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>微博 spammer 账号识别模型</title>
       <link href="/blog/weibo-spammer-account-identify-model.html"/>
       <url>/blog/weibo-spammer-account-identify-model.html</url>
@@ -87,7 +118,7 @@
     
     
     <entry>
-      <title>李佳琦微博粉丝画像简析</title>
+      <title>「李佳琦」微博粉丝画像简析</title>
       <link href="/blog/ljq-fans-portrait.html"/>
       <url>/blog/ljq-fans-portrait.html</url>
       
