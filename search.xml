@@ -169,11 +169,11 @@
             
             <tag> pandas </tag>
             
-            <tag> value_counts </tag>
-            
             <tag> chart </tag>
             
             <tag> pie </tag>
+            
+            <tag> value_counts </tag>
             
         </tags>
       
@@ -482,11 +482,11 @@
       
         <tags>
             
+            <tag> pandas </tag>
+            
             <tag> filter </tag>
             
             <tag> groupby </tag>
-            
-            <tag> pandas </tag>
             
         </tags>
       
@@ -569,9 +569,9 @@
       
         <tags>
             
-            <tag> groupby </tag>
-            
             <tag> pandas </tag>
+            
+            <tag> groupby </tag>
             
             <tag> frequency </tag>
             
@@ -677,9 +677,9 @@
       
         <tags>
             
-            <tag> pandas </tag>
-            
             <tag> 分层抽样 </tag>
+            
+            <tag> pandas </tag>
             
         </tags>
       
