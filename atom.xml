@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2024-04-03T13:20:02.704Z</updated>
+  <updated>2024-04-03T13:24:29.654Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>都是哪些人在关注小米 SU7</title>
-    <link href="https://buyixiao.github.io/blog/xiaomi-su7-fans-portrait.html"/>
-    <id>https://buyixiao.github.io/blog/xiaomi-su7-fans-portrait.html</id>
+    <link href="https://buyixiao.github.io/blog/xiaomi-auto-fans-portrait.html"/>
+    <id>https://buyixiao.github.io/blog/xiaomi-auto-fans-portrait.html</id>
     <published>2024-04-03T11:59:47.000Z</published>
-    <updated>2024-04-03T13:20:02.704Z</updated>
+    <updated>2024-04-03T13:24:29.654Z</updated>
     
-    <content type="html"><![CDATA[<p>近来最火热的话题莫过于小米发布的 SU7，无论是 SU7 发布会当天的直播间人气，还是 24 小时 SU7 的大定数目，都让小米汽车吸引了无数关注。</p><p>使用 Python3 爬虫采集了「小米汽车」微博的 50000+ 粉丝，对 profile 的多个维度进行了可视分析，构建简单的用户画像分析如下：</p><blockquote><p>以下分析只针对这 50000+ 粉丝，不能代表整体~</p></blockquote><ol><li>粉丝性别比为男女 13:4 ，大概就是男 3 女 1 的比例，小米的粉丝群主主要理工男居多，这很合理，不过与李佳琦粉丝男 1 女 2 的比例相比男粉比例翻了一倍多，和小杨哥男 3 女 2 相比也高出 10 多个百分点。</li><li>粉丝大部分（<del>93%）是普通用户，</del>2.2% 是明星名人，~4.2% 是其他认证用户，比起前面两位大 V 粉丝中名人达人的比例，小米汽车差不多翻倍。</li><li>阳光信用上信用中上（信用较好及以上）比例 69%，信用中下（信用一般及以下）的占比约 30~，粉丝阳光信用之高可见一斑。</li><li>粉丝 ip 属地省份分布上，集中分布在广东、江苏、浙江、山东、河南等经济或人口大省，广东一骑绝尘占比超过 10%，江苏、浙江、山东均在 5% 上下。</li><li>粉丝就读或毕业学校上，武汉大学遥遥领先稳高居 top1，这很大程度上应该要归结于雷军强大的校友光环，同城双子星的华科则差不多是武大占比一半。</li><li>在粉丝的微博注册时间分布上，注册微博 10 年以上的粉丝居然占比最大，注册 3 年左右的粉丝占比最小。</li><li>去除了 1965 年以前和 2015 年以后的噪声数据，粉丝出生年份整体呈现以 1998 年为均值的正态分布，尤其集中在 1995-2000 年，95 后最粉雷军，00 后比例直接腰斩。</li><li>只有约四成的粉丝的粉丝数小于 10，有 116 个粉丝数超过 10w 的小大 V 关注了他。</li></ol><p>综上所述，关注小米 SU7 的粉丝各项指标遥遥领先。</p><p>可视化效果图如下，加载可能较慢，可以交互~</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;3160&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;auto&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">src</span>=<span class="string">&quot;../assets/html5/xiaomi_auto_fans_analysis.html&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>近来最火热的话题莫过于小米发布的 SU7，无论是 SU7 发布会当天的直播间人气，还是 24 小时 SU7 的大定数目，都让小米汽车吸引了无数关注。</p><p>使用 Python3 爬虫采集了「小米汽车」微博的 50000+ 粉丝，对 profile 的多个维度进行了可视分析，构建简单的用户画像分析如下：</p><blockquote><p>以下分析只针对这 50000+ 粉丝，不能代表整体~</p></blockquote><ol><li>粉丝性别比为男女 13:4 ，大概就是男 3 女 1 的比例，小米的粉丝群主主要理工男居多，这很合理，不过与李佳琦粉丝男 1 女 2 的比例相比男粉比例翻了一倍多，和小杨哥男 3 女 2 相比也高出 10 多个百分点。</li><li>粉丝大部分（<del>93%）是普通用户，</del>2.2% 是明星名人，~4.2% 是其他认证用户，比起前面两位大 V 粉丝中名人达人的比例，小米汽车差不多翻倍。</li><li>阳光信用上信用中上（信用较好及以上）比例 69%，信用中下（信用一般及以下）的占比约 30~，粉丝阳光信用之高可见一斑。</li><li>粉丝 ip 属地省份分布上，集中分布在广东、江苏、浙江、山东、河南等经济或人口大省，广东一骑绝尘占比超过 10%，江苏、浙江、山东均在 5% 上下。</li><li>粉丝就读或毕业学校上，武汉大学遥遥领先稳高居 top1，这很大程度上应该要归结于雷军强大的校友光环，同城双子星的华科则差不多是武大占比一半。</li><li>在粉丝的微博注册时间分布上，注册微博 10 年以上的粉丝居然占比最大，注册 3 年左右的粉丝占比最小。</li><li>去除了 1965 年以前和 2015 年以后的噪声数据，粉丝出生年份整体呈现以 1998 年为均值的正态分布，尤其集中在 1995-2000 年，95 后最粉雷军，00 后比例直接腰斩。</li><li>只有约四成的粉丝的粉丝数小于 10，有 116 个粉丝数超过 10w 的小大 V 关注了他。</li></ol><p>综上所述，关注小米 SU7 Auto 的粉丝各项指标遥遥领先。</p><p>可视化效果图如下，加载可能较慢，可以交互~</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;3160&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;auto&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">src</span>=<span class="string">&quot;../assets/html5/xiaomi_auto_fans_analysis.html&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
     
       
