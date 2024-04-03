@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2023-11-24T03:28:43.594Z</updated>
+  <updated>2024-04-03T13:20:02.704Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>都是哪些人在关注小米 SU7</title>
+    <link href="https://buyixiao.github.io/blog/xiaomi-su7-fans-portrait.html"/>
+    <id>https://buyixiao.github.io/blog/xiaomi-su7-fans-portrait.html</id>
+    <published>2024-04-03T11:59:47.000Z</published>
+    <updated>2024-04-03T13:20:02.704Z</updated>
+    
+    <content type="html"><![CDATA[<p>近来最火热的话题莫过于小米发布的 SU7，无论是 SU7 发布会当天的直播间人气，还是 24 小时 SU7 的大定数目，都让小米汽车吸引了无数关注。</p><p>使用 Python3 爬虫采集了「小米汽车」微博的 50000+ 粉丝，对 profile 的多个维度进行了可视分析，构建简单的用户画像分析如下：</p><blockquote><p>以下分析只针对这 50000+ 粉丝，不能代表整体~</p></blockquote><ol><li>粉丝性别比为男女 13:4 ，大概就是男 3 女 1 的比例，小米的粉丝群主主要理工男居多，这很合理，不过与李佳琦粉丝男 1 女 2 的比例相比男粉比例翻了一倍多，和小杨哥男 3 女 2 相比也高出 10 多个百分点。</li><li>粉丝大部分（<del>93%）是普通用户，</del>2.2% 是明星名人，~4.2% 是其他认证用户，比起前面两位大 V 粉丝中名人达人的比例，小米汽车差不多翻倍。</li><li>阳光信用上信用中上（信用较好及以上）比例 69%，信用中下（信用一般及以下）的占比约 30~，粉丝阳光信用之高可见一斑。</li><li>粉丝 ip 属地省份分布上，集中分布在广东、江苏、浙江、山东、河南等经济或人口大省，广东一骑绝尘占比超过 10%，江苏、浙江、山东均在 5% 上下。</li><li>粉丝就读或毕业学校上，武汉大学遥遥领先稳高居 top1，这很大程度上应该要归结于雷军强大的校友光环，同城双子星的华科则差不多是武大占比一半。</li><li>在粉丝的微博注册时间分布上，注册微博 10 年以上的粉丝居然占比最大，注册 3 年左右的粉丝占比最小。</li><li>去除了 1965 年以前和 2015 年以后的噪声数据，粉丝出生年份整体呈现以 1998 年为均值的正态分布，尤其集中在 1995-2000 年，95 后最粉雷军，00 后比例直接腰斩。</li><li>只有约四成的粉丝的粉丝数小于 10，有 116 个粉丝数超过 10w 的小大 V 关注了他。</li></ol><p>综上所述，关注小米 SU7 的粉丝各项指标遥遥领先。</p><p>可视化效果图如下，加载可能较慢，可以交互~</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;3160&quot;</span> <span class="attr">scrolling</span>=<span class="string">&quot;auto&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">src</span>=<span class="string">&quot;../assets/html5/xiaomi_auto_fans_analysis.html&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;近来最火热的话题莫过于小米发布的 SU7，无论是 SU7 发布会当天的直播间人气，还是 24 小时 SU7 的大定数目，都让小米汽车吸引了无数关注。&lt;/p&gt;
+&lt;p&gt;使用 Python3 爬虫采集了「小米汽车」微博的 50000+ 粉丝，对 profile 的多个维度进行了可</summary>
+      
+    
+    
+    
+    <category term="可视化" scheme="https://buyixiao.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    
+    <category term="可视化" scheme="https://buyixiao.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    <category term="数据分析" scheme="https://buyixiao.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    
+    <category term="echarts" scheme="https://buyixiao.github.io/tags/echarts/"/>
+    
+    <category term="粉丝画像" scheme="https://buyixiao.github.io/tags/%E7%B2%89%E4%B8%9D%E7%94%BB%E5%83%8F/"/>
+    
+    <category term="小米 SU7" scheme="https://buyixiao.github.io/tags/%E5%B0%8F%E7%B1%B3-SU7/"/>
+    
+    <category term="雷军" scheme="https://buyixiao.github.io/tags/%E9%9B%B7%E5%86%9B/"/>
+    
+    <category term="米粉" scheme="https://buyixiao.github.io/tags/%E7%B1%B3%E7%B2%89/"/>
+    
+  </entry>
   
   <entry>
     <title>「疯狂小杨哥」微博粉丝画像简析</title>
@@ -431,11 +468,11 @@
     <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
     
     
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
-    
     <category term="filter" scheme="https://buyixiao.github.io/tags/filter/"/>
     
     <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
+    
+    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
   </entry>
   
@@ -486,31 +523,6 @@
     <category term="android" scheme="https://buyixiao.github.io/tags/android/"/>
     
     <category term="连拍" scheme="https://buyixiao.github.io/tags/%E8%BF%9E%E6%8B%8D/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pandas 分组频率统计</title>
-    <link href="https://buyixiao.github.io/blog/pandas-groupby-frequency-statistics.html"/>
-    <id>https://buyixiao.github.io/blog/pandas-groupby-frequency-statistics.html</id>
-    <published>2022-05-28T12:50:25.000Z</published>
-    <updated>2022-05-28T13:30:06.461Z</updated>
-    
-    <content type="html"><![CDATA[<p>假设有一个 dataframe 如下：</p><table><thead><tr><th align="center">country_name</th><th align="center">date</th><th align="center">标题</th></tr></thead><tbody><tr><td align="center">中国</td><td align="center">20030101</td><td align="center">今天是 2003 年第一天，我在中国</td></tr><tr><td align="center">安提瓜和巴布达</td><td align="center">20030101</td><td align="center">今天是 2003 年第一天，我在安提瓜和巴布达</td></tr><tr><td align="center">中国</td><td align="center">20030102</td><td align="center">今天是 2003 年第二天，我在中国</td></tr><tr><td align="center">蒙古</td><td align="center">20030102</td><td align="center">今天是 2003 年第二天，我在蒙古</td></tr></tbody></table><p>现在要统计每天每个国家在当天出现的频率，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2022/5/28 20:10</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># website           https://buyixiao.github.io/</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;all_country.csv&#x27;</span></span><br><span class="line"></span><br><span class="line">df = pd.read_csv(input_file)</span><br><span class="line"></span><br><span class="line">res_df = df.groupby([<span class="string">&#x27;date&#x27;</span>, <span class="string">&#x27;country_name&#x27;</span>]).count().reset_index()</span><br><span class="line"></span><br><span class="line">res_df = res_df[res_df.columns[:<span class="number">3</span>]]</span><br><span class="line"></span><br><span class="line">res_df.rename(columns=&#123;<span class="string">&#x27;标题&#x27;</span>: <span class="string">&#x27;daily_cnt&#x27;</span>&#125;, inplace=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(res_df, res_df.columns)</span><br><span class="line"></span><br><span class="line">res_df[<span class="string">&#x27;daily_frq&#x27;</span>] = [<span class="number">0</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(res_df.shape[<span class="number">0</span>])]</span><br><span class="line"><span class="keyword">for</span> index, row <span class="keyword">in</span> res_df.iterrows():</span><br><span class="line">    res_df.loc[index, <span class="string">&#x27;daily_frq&#x27;</span>] = <span class="built_in">round</span>(row[<span class="string">&#x27;daily_cnt&#x27;</span>] / df[df[<span class="string">&#x27;date&#x27;</span>] == row[<span class="string">&#x27;date&#x27;</span>]].shape[<span class="number">0</span>], <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">res_df.to_csv(<span class="string">&quot;res_&quot;</span> + input_file, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如有更优雅的方式（肯定有），请批评指正~</p>]]></content>
-    
-    
-    <summary type="html">按照 A 列分组，统计 B 列下每个取值的频率</summary>
-    
-    
-    
-    <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
-    
-    
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
-    
-    <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
-    
-    <category term="frequency" scheme="https://buyixiao.github.io/tags/frequency/"/>
     
   </entry>
   
