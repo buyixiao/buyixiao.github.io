@@ -6,7 +6,7 @@
   <link href="https://buyixiao.github.io/atom.xml" rel="self"/>
   
   <link href="https://buyixiao.github.io/"/>
-  <updated>2025-04-26T08:24:12.279Z</updated>
+  <updated>2025-05-01T10:03:24.243Z</updated>
   <id>https://buyixiao.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Instagram 帖子数据采集</title>
+    <link href="https://buyixiao.github.io/blog/instagram-keyword-checkin-post-spider.html"/>
+    <id>https://buyixiao.github.io/blog/instagram-keyword-checkin-post-spider.html</id>
+    <published>2025-05-01T09:42:10.000Z</published>
+    <updated>2025-05-01T10:03:24.243Z</updated>
+    
+    <content type="html"><![CDATA[<p>Instagram 是一款图片分享社交应用，Instagram 签到数据指的是用户分享图片帖子时带上了用户当时所在地，比起普通帖子多了地理位置这一信息，扩展了数据的维度。</p><h3 id="研究意义"><a href="#研究意义" class="headerlink" title="研究意义"></a>研究意义</h3><p><strong>地理签到帖子</strong>的研究具有多方面的重要意义，尤其在社交媒体分析、城市研究、旅游经济等领域中表现突出。</p><h4 id="✅-1-用户行为理解"><a href="#✅-1-用户行为理解" class="headerlink" title="✅ 1. 用户行为理解"></a>✅ 1. <strong>用户行为理解</strong></h4><p>通过分析用户在特定地点发布的帖子，可以洞察用户的行为模式、兴趣偏好、活动时间与地点偏好等，从而帮助平台优化推荐算法和广告投放策略。</p><h4 id="✅-2-城市与区域活跃度分析"><a href="#✅-2-城市与区域活跃度分析" class="headerlink" title="✅ 2. 城市与区域活跃度分析"></a>✅ 2. <strong>城市与区域活跃度分析</strong></h4><p>Geo-tag 数据可以反映城市中哪些地点最受欢迎、人流密度如何变化，有助于<strong>城市规划、商业选址、交通管理</strong>等决策制定。</p><h4 id="✅-3-旅游趋势监测"><a href="#✅-3-旅游趋势监测" class="headerlink" title="✅ 3. 旅游趋势监测"></a>✅ 3. <strong>旅游趋势监测</strong></h4><p>旅游机构和研究者可以利用 Instagram 地理签到数据实时追踪热门旅游景点、游客来源地、旅游季节性等信息，对旅游推广和资源分配具有重要价值。</p><h4 id="✅-4-事件检测与社会感知"><a href="#✅-4-事件检测与社会感知" class="headerlink" title="✅ 4. 事件检测与社会感知"></a>✅ 4. <strong>事件检测与社会感知</strong></h4><p>某地短时间内地理签到帖子激增可能代表<strong>重大事件发生</strong>（如演唱会、抗议、灾害等），可用于<strong>社会感知与应急响应分析</strong>。</p><h4 id="✅-5-文化与情感空间分析"><a href="#✅-5-文化与情感空间分析" class="headerlink" title="✅ 5. 文化与情感空间分析"></a>✅ 5. <strong>文化与情感空间分析</strong></h4><p>结合图像内容和地理标签，可以研究不同地点上传达的情感色彩与文化表达，揭示城市空间与人类情绪之间的联系。</p><h3 id="Instagram-签到数据采集服务"><a href="#Instagram-签到数据采集服务" class="headerlink" title="Instagram 签到数据采集服务"></a>Instagram 签到数据采集服务</h3><p>研发了一套稳定的 instagram 地理签到数据采集系统，可以采集全球任意城市的地理签到帖子，主要字段如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">帖子 <span class="built_in">id</span></span><br><span class="line">帖子链接</span><br><span class="line">帖子发布时间</span><br><span class="line">帖子正文</span><br><span class="line">帖子图片链接</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">帖子作者 <span class="built_in">id</span></span><br><span class="line">帖子作者用户名</span><br><span class="line">帖子作者链接</span><br><span class="line"></span><br><span class="line">帖子评论数</span><br><span class="line">帖子点赞数</span><br><span class="line"></span><br><span class="line">帖子签到城市</span><br><span class="line">帖子签到经度</span><br><span class="line">帖子签到纬度</span><br></pre></td></tr></table></figure><p>个性化定制需求，最终交付数据，支持对公转账，可开发票，</p><p>已服务国内外一些高校实验室老师，</p><p>有相关需求的欢迎博客下方评论，如果回复不及时可前往爱发电平台私聊：</p><blockquote><p><a href="https://afdian.com/a/buyixiao">https://afdian.com/a/buyixiao</a></p></blockquote><p>只服务正规科研论文数据分析、数据支持的行业咨询需求，灰产勿扰！灰产勿扰！灰产勿扰！</p>]]></content>
+    
+    
+    <summary type="html">Instagram 地理位置签到 帖子采集</summary>
+    
+    
+    
+    <category term="Spider" scheme="https://buyixiao.github.io/categories/Spider/"/>
+    
+    
+    <category term="spider" scheme="https://buyixiao.github.io/tags/spider/"/>
+    
+    <category term="check-in" scheme="https://buyixiao.github.io/tags/check-in/"/>
+    
+    <category term="posts" scheme="https://buyixiao.github.io/tags/posts/"/>
+    
+    <category term="keyword" scheme="https://buyixiao.github.io/tags/keyword/"/>
+    
+    <category term="instagram" scheme="https://buyixiao.github.io/tags/instagram/"/>
+    
+  </entry>
   
   <entry>
     <title>Facebook 帖子数据采集</title>
@@ -506,31 +535,6 @@
     <category term="crontab" scheme="https://buyixiao.github.io/tags/crontab/"/>
     
     <category term="python" scheme="https://buyixiao.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pandas groupby filter 函数妙用</title>
-    <link href="https://buyixiao.github.io/blog/pandas-groupby-filter.html"/>
-    <id>https://buyixiao.github.io/blog/pandas-groupby-filter.html</id>
-    <published>2023-01-07T02:26:53.000Z</published>
-    <updated>2023-07-21T15:07:20.868Z</updated>
-    
-    <content type="html"><![CDATA[<p>假设有一个狂人日记的 dataframe 如下：</p><table><thead><tr><th align="center">user_name</th><th align="center">publish_time</th><th align="center">content</th></tr></thead><tbody><tr><td align="center">小明</td><td align="center">2022-12-30 15:10:00</td><td align="center">今天是 2022 年最后一天，我在广东</td></tr><tr><td align="center">小刚</td><td align="center">2022-01-01 12:23:33</td><td align="center">今天是 2022 年第一天，我在加勒比</td></tr><tr><td align="center">小王</td><td align="center">2022-01-01 12:33:00</td><td align="center">今天是 2022 年第一天，我在小刚身边</td></tr><tr><td align="center">小刚</td><td align="center">2023-01-01 02:15:45</td><td align="center">今天是 2023 年第一天，我在百慕大</td></tr><tr><td align="center">小明</td><td align="center">2023-01-01 00:05:20</td><td align="center">今天是 2023 年第一天，我还在广东</td></tr></tbody></table><p>现在我们要统计狂人日记里面，同一作者第一次和最后一次发布时间差大于 30 天的行。</p><p>乍一看，首先必须统计同一作者至少发布两次的行，也就是上一篇<a href="https://buyixiao.github.io/blog/pandas-value-counts.html">value counts</a> 的内容。</p><p>然后再使用 groupby 分组 + filter 过滤实现，这个 filter 相当于 mysql 语句中 groupby 后的 having 语句，是在分组上做筛选的。</p><p>所以在上一篇的基础上，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># author:           inspurer(月小水长)</span></span><br><span class="line"><span class="comment"># create_time:      2023/1/7 8:58</span></span><br><span class="line"><span class="comment"># 运行环境           Python3.6+</span></span><br><span class="line"><span class="comment"># github            https://github.com/inspurer</span></span><br><span class="line"><span class="comment"># website           https://buyixiao.github.io/</span></span><br><span class="line"><span class="comment"># 微信公众号         月小水长</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">input_file = <span class="string">&#x27;./狂人日记 2022.csv&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">remove_show_count_below_n</span>(<span class="params">input_file, col, n=<span class="number">2</span></span>):</span></span><br><span class="line">    df = pd.read_csv(input_file)</span><br><span class="line">    <span class="comment"># 第一步，筛选 user_name 出现大于等于 2 次的行</span></span><br><span class="line">    count_df = pd.DataFrame(df[col].value_counts())</span><br><span class="line">    count_df.columns = [<span class="string">&#x27;count&#x27;</span>]</span><br><span class="line">    not_below_n_index = count_df[count_df[<span class="string">&#x27;count&#x27;</span>] &gt;= n].index</span><br><span class="line">    df = df[df[col].isin(not_below_n_index)]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 比上一篇新加的內容</span></span><br><span class="line">    df[<span class="string">&#x27;publish_date&#x27;</span>] = pd.to_datetime(df[<span class="string">&#x27;publish_time&#x27;</span>]).dt.date</span><br><span class="line">    df = df.groupby(col).<span class="built_in">filter</span>(<span class="keyword">lambda</span> x: (x[<span class="string">&#x27;publish_date&#x27;</span>].<span class="built_in">max</span>() - x[<span class="string">&#x27;publish_date&#x27;</span>].<span class="built_in">min</span>()).days &gt; <span class="number">30</span>)</span><br><span class="line"></span><br><span class="line">    df.to_csv(<span class="string">&#x27;result.csv&#x27;</span>, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">remove_show_count_below_n(input_file, col=<span class="string">&#x27;user_name&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>仔细想想，第一步真的有必要吗？如果只出现一次，在第二步 publish_date 相减的时候差值为 0，直接就过滤掉了，所以第一步在这个任务是多此一举。简化代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">time_interval_filter</span>(<span class="params">input_file, col, days</span>):</span></span><br><span class="line">    df = pd.read_csv(input_file)</span><br><span class="line">    df[<span class="string">&#x27;publish_date&#x27;</span>] = pd.to_datetime(df[<span class="string">&#x27;publish_time&#x27;</span>]).dt.date</span><br><span class="line">    df = df.groupby(col).<span class="built_in">filter</span>(<span class="keyword">lambda</span> x: (x[<span class="string">&#x27;publish_date&#x27;</span>].<span class="built_in">max</span>() - x[<span class="string">&#x27;publish_date&#x27;</span>].<span class="built_in">min</span>()).days &gt; days)</span><br><span class="line">    df.to_csv(<span class="string">&#x27;result.csv&#x27;</span>, index=<span class="literal">False</span>, encoding=<span class="string">&#x27;utf-8-sig&#x27;</span>)</span><br><span class="line"></span><br><span class="line">time_interval_filter(input_file, col=<span class="string">&#x27;user_name&#x27;</span>, days=<span class="number">30</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">筛选出两次时间差大于任意时间的内容</summary>
-    
-    
-    
-    <category term="Python" scheme="https://buyixiao.github.io/categories/Python/"/>
-    
-    
-    <category term="filter" scheme="https://buyixiao.github.io/tags/filter/"/>
-    
-    <category term="groupby" scheme="https://buyixiao.github.io/tags/groupby/"/>
-    
-    <category term="pandas" scheme="https://buyixiao.github.io/tags/pandas/"/>
     
   </entry>
   
